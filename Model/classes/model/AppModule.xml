@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="EmployeesVO1"
+    ViewObjectName="model.EmployeesVO"/>
+  <ViewUsage
+    Name="EmployeesRVO1"
+    ViewObjectName="model.EmployeesRVO"/>
+</AppModule>
