@@ -24,6 +24,30 @@
         ResId="model.EmployeesVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <ViewAccessor
+    Name="AppModule_EmployeesVO1_1"
+    ViewObjectName="model.EmployeesVO"
+    AMUsageName="AppModule"
+    ViewInstanceName="EmployeesVO1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Deptno"
+    ListVOName="AppModule_EmployeesVO1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Deptno"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Deptno"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Ename"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="EmployeesEO"
     Entity="model.EmployeesEO"/>
@@ -45,7 +69,15 @@
     PrecisionRule="true"
     EntityAttrName="Deptno"
     EntityUsage="EmployeesEO"
-    AliasName="DEPTNO"/>
+    AliasName="DEPTNO"
+    LOVName="LOV_Deptno">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Ename"
     PrecisionRule="true"

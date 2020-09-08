@@ -13,4 +13,7 @@
   <ViewUsage
     Name="EmployeesRVO1"
     ViewObjectName="model.EmployeesRVO"/>
+  <ViewUsage
+    Name="DeptVO1"
+    ViewObjectName="model.DeptVO"/>
 </AppModule>

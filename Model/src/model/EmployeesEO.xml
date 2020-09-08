@@ -88,6 +88,13 @@
     Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="EMP"/>
+  <AccessorAttribute
+    Name="DeptEO"
+    Association="model.FkDeptnoAssoc"
+    AssociationEnd="model.FkDeptnoAssoc.DeptEO"
+    AssociationOtherEnd="model.FkDeptnoAssoc.EmployeesEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="PkEmp"
     PrimaryKey="true">

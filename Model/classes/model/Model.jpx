@@ -23,6 +23,12 @@
       <Attr Name="_EO" Value="true"/>
       <Attr Name="_VO" Value="true"/>
       <Attr Name="_AM" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
     </DesignTime>
   </Containee>
+  <AppModuleUsage
+    Name="AppModule"
+    FullName="model.AppModule"
+    ConfigurationName="model.AppModuleShared"
+    SharedScope="2"/>
 </JboProject>
