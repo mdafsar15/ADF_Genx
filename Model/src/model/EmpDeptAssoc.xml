@@ -3,39 +3,39 @@
 <!---->
 <Association
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="EmpDeptFkAssoc"
+  Name="EmpDeptAssoc"
   Version="12.2.1.9.14"
   InheritPersonalization="merge">
   <DesignTime>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <AssociationEnd
+    Name="EmployeesEO"
+    Cardinality="-1"
+    Source="true"
+    Owner="model.EmployeesEO"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="EmployeesEO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmployeesEO.DepartmentId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
     Name="DepartmentsEO"
     Cardinality="1"
-    Source="true"
     Owner="model.DepartmentsEO">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="DepartmentsEO"/>
-      <Attr Name="_foreignKey" Value="model.DepartmentsEO.DeptIdPk"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.DepartmentsEO.DepartmentId"/>
-    </AttrArray>
-  </AssociationEnd>
-  <AssociationEnd
-    Name="EmployeesEO"
-    Cardinality="-1"
-    Owner="model.EmployeesEO">
-    <DesignTime>
-      <Attr Name="_isUpdateable" Value="true"/>
-      <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="EmployeesEO"/>
-      <Attr Name="_foreignKey" Value="model.EmployeesEO.EmpDeptFk"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.DepartmentId"/>
     </AttrArray>
   </AssociationEnd>
 </Association>

@@ -130,38 +130,17 @@
     ColumnType="NUMBER"
     TableName="EMPLOYEES"/>
   <AccessorAttribute
-    Name="EmployeesEO"
-    Association="model.EmpManagerFkAssoc"
-    AssociationEnd="model.EmpManagerFkAssoc.EmployeesEO"
-    AssociationOtherEnd="model.EmpManagerFkAssoc.ManagerIdEmployeesEO"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="ManagerIdEmployeesEO"
-    Association="model.EmpManagerFkAssoc"
-    AssociationEnd="model.EmpManagerFkAssoc.ManagerIdEmployeesEO"
-    AssociationOtherEnd="model.EmpManagerFkAssoc.EmployeesEO"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="DepartmentsEO"
-    Association="model.EmpDeptFkAssoc"
-    AssociationEnd="model.EmpDeptFkAssoc.DepartmentsEO"
-    AssociationOtherEnd="model.EmpDeptFkAssoc.EmployeesEO"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="DepartmentsEO1"
-    Association="model.DeptMgrFkAssoc"
-    AssociationEnd="model.DeptMgrFkAssoc.DepartmentsEO1"
-    AssociationOtherEnd="model.DeptMgrFkAssoc.EmployeesEO1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="JobsEO"
     Association="model.EmpJobFkAssoc"
     AssociationEnd="model.EmpJobFkAssoc.JobsEO"
     AssociationOtherEnd="model.EmpJobFkAssoc.EmployeesEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="DepartmentsEO"
+    Association="model.EmpDeptAssoc"
+    AssociationEnd="model.EmpDeptAssoc.DepartmentsEO"
+    AssociationOtherEnd="model.EmpDeptAssoc.EmployeesEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key

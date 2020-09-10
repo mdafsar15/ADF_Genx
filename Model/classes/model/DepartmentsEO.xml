@@ -54,18 +54,11 @@
     TableName="DEPARTMENTS"/>
   <AccessorAttribute
     Name="EmployeesEO"
-    Association="model.EmpDeptFkAssoc"
-    AssociationEnd="model.EmpDeptFkAssoc.EmployeesEO"
-    AssociationOtherEnd="model.EmpDeptFkAssoc.DepartmentsEO"
+    Association="model.EmpDeptAssoc"
+    AssociationEnd="model.EmpDeptAssoc.EmployeesEO"
+    AssociationOtherEnd="model.EmpDeptAssoc.DepartmentsEO"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="EmployeesEO1"
-    Association="model.DeptMgrFkAssoc"
-    AssociationEnd="model.DeptMgrFkAssoc.EmployeesEO1"
-    AssociationOtherEnd="model.DeptMgrFkAssoc.DepartmentsEO1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
   <Key
     Name="DeptIdPk"
     PrimaryKey="true">
