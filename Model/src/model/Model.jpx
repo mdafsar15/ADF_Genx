@@ -9,10 +9,9 @@
   PackageName="model">
   <DesignTime>
     <Attr Name="_DTExpressionTypeChecking" Value="true"/>
-    <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../Model.jpr"/>
-    <Attr Name="_NamedConnection" Value="Genx"/>
-    <Attr Name="_useAnsiJoinSyntax" Value="true"/>
+    <Attr Name="_NamedConnection" Value="Genx11g"/>
     <Attr Name="_appModuleNames0" Value="model.AppModule"/>
   </DesignTime>
   <Containee
@@ -21,9 +20,9 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
       <Attr Name="_VO" Value="true"/>
       <Attr Name="_AM" Value="true"/>
-      <Attr Name="_AS" Value="true"/>
     </DesignTime>
   </Containee>
   <AppModuleUsage

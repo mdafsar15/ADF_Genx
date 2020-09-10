@@ -6,17 +6,12 @@
   Name="EmployeesVO"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
-  SelectList="EmployeesEO.EMPNO, 
-       EmployeesEO.COMM, 
-       EmployeesEO.DEPTNO, 
-       EmployeesEO.ENAME, 
-       EmployeesEO.HIREDATE, 
-       EmployeesEO.JOB, 
-       EmployeesEO.MGR, 
-       EmployeesEO.SAL"
-  FromList="EMP EmployeesEO"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
+  SelectAllAttributes="false"
   PageIterMode="Full">
   <Properties>
     <SchemaBasedProperties>
@@ -24,90 +19,81 @@
         ResId="model.EmployeesVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <ViewAccessor
-    Name="AppModule_EmployeesVO1_1"
-    ViewObjectName="model.EmployeesVO"
-    AMUsageName="AppModule"
-    ViewInstanceName="EmployeesVO1"
-    RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_Deptno"
-    ListVOName="AppModule_EmployeesVO1_1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Deptno"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Deptno"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Ename"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
   <EntityUsage
     Name="EmployeesEO"
     Entity="model.EmployeesEO"/>
   <ViewAttribute
-    Name="Empno"
+    Name="CommissionPct"
+    PrecisionRule="true"
+    EntityAttrName="CommissionPct"
+    EntityUsage="EmployeesEO"
+    AliasName="COMMISSION_PCT"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="EmployeesEO"
+    AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="Email"
+    IsUnique="true"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Empno"
+    EntityAttrName="Email"
     EntityUsage="EmployeesEO"
-    AliasName="EMPNO"/>
+    AliasName="EMAIL"/>
   <ViewAttribute
-    Name="Comm"
+    Name="EmployeeId"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Comm"
+    EntityAttrName="EmployeeId"
     EntityUsage="EmployeesEO"
-    AliasName="COMM"/>
+    AliasName="EMPLOYEE_ID"/>
   <ViewAttribute
-    Name="Deptno"
+    Name="FirstName"
     PrecisionRule="true"
-    EntityAttrName="Deptno"
+    EntityAttrName="FirstName"
     EntityUsage="EmployeesEO"
-    AliasName="DEPTNO"
-    LOVName="LOV_Deptno">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="FIRST_NAME"/>
   <ViewAttribute
-    Name="Ename"
+    Name="HireDate"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Ename"
+    EntityAttrName="HireDate"
     EntityUsage="EmployeesEO"
-    AliasName="ENAME"/>
+    AliasName="HIRE_DATE"/>
   <ViewAttribute
-    Name="Hiredate"
+    Name="JobId"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Hiredate"
+    EntityAttrName="JobId"
     EntityUsage="EmployeesEO"
-    AliasName="HIREDATE"/>
+    AliasName="JOB_ID"/>
   <ViewAttribute
-    Name="Job"
+    Name="LastName"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Job"
+    EntityAttrName="LastName"
     EntityUsage="EmployeesEO"
-    AliasName="JOB"/>
+    AliasName="LAST_NAME"/>
   <ViewAttribute
-    Name="Mgr"
+    Name="ManagerId"
     PrecisionRule="true"
-    EntityAttrName="Mgr"
+    EntityAttrName="ManagerId"
     EntityUsage="EmployeesEO"
-    AliasName="MGR"/>
+    AliasName="MANAGER_ID"/>
   <ViewAttribute
-    Name="Sal"
+    Name="PhoneNumber"
     PrecisionRule="true"
-    EntityAttrName="Sal"
+    EntityAttrName="PhoneNumber"
     EntityUsage="EmployeesEO"
-    AliasName="SAL"/>
+    AliasName="PHONE_NUMBER"/>
+  <ViewAttribute
+    Name="Salary"
+    PrecisionRule="true"
+    EntityAttrName="Salary"
+    EntityUsage="EmployeesEO"
+    AliasName="SALARY"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

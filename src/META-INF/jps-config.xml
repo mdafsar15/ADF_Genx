@@ -10,8 +10,8 @@
          <property name="location" value="./"/>
       </serviceInstance>
    </serviceInstances>
-   <jpsContexts default="Genx">
-      <jpsContext name="Genx">
+   <jpsContexts default="ADFGenx">
+      <jpsContext name="ADFGenx">
          <serviceInstanceRef ref="credstore"/>
       </jpsContext>
    </jpsContexts>

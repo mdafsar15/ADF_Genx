@@ -14,6 +14,15 @@
     Name="EmployeesRVO1"
     ViewObjectName="model.EmployeesRVO"/>
   <ViewUsage
-    Name="DeptVO1"
-    ViewObjectName="model.DeptVO"/>
+    Name="DepartmentsView1"
+    ViewObjectName="model.DepartmentsView"/>
+  <ViewUsage
+    Name="JobsView1"
+    ViewObjectName="model.JobsView"/>
+  <ViewUsage
+    Name="CountriesView1"
+    ViewObjectName="model.CountriesView"/>
+  <ViewUsage
+    Name="RegionsView1"
+    ViewObjectName="model.RegionsView"/>
 </AppModule>

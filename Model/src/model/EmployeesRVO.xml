@@ -18,49 +18,140 @@
         ResId="model.EmployeesRVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT * FROM EMP]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT * FROM EMPLOYEES]]></SQLQuery>
   <ViewAttribute
-    Name="Empno"
+    Name="EmployeeId"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.lang.Integer"
     ColumnType="INTEGER"
-    AliasName="EMPNO"
-    Expression="EMPNO"
+    AliasName="EMPLOYEE_ID"
+    Expression="EMPLOYEE_ID"
     SQLType="NUMERIC"/>
   <ViewAttribute
-    Name="Ename"
+    Name="FirstName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="FIRST_NAME"
+    Expression="FIRST_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LastName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="25"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="LAST_NAME"
+    Expression="LAST_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Email"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="25"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="EMAIL"
+    Expression="EMAIL"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PhoneNumber"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PHONE_NUMBER"
+    Expression="PHONE_NUMBER"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="HireDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    AliasName="HIRE_DATE"
+    Expression="HIRE_DATE"
+    SQLType="DATE"/>
+  <ViewAttribute
+    Name="JobId"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Precision="10"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    AliasName="ENAME"
-    Expression="ENAME"
+    AliasName="JOB_ID"
+    Expression="JOB_ID"
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
   </ViewAttribute>
   <ViewAttribute
-    Name="Job"
+    Name="Salary"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Precision="9"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    AliasName="JOB"
-    Expression="JOB"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="9"/>
-    </DesignTime>
-  </ViewAttribute>
+    Precision="8"
+    Scale="2"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="SALARY"
+    Expression="SALARY"
+    SQLType="NUMERIC"/>
   <ViewAttribute
-    Name="Mgr"
+    Name="CommissionPct"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="2"
+    Scale="2"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="COMMISSION_PCT"
+    Expression="COMMISSION_PCT"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ManagerId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="6"
+    Scale="0"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    AliasName="MANAGER_ID"
+    Expression="MANAGER_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="DepartmentId"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
@@ -68,57 +159,11 @@
     Scale="0"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    AliasName="MGR"
-    Expression="MGR"
-    SQLType="NUMERIC"/>
-  <ViewAttribute
-    Name="Hiredate"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.sql.Date"
-    ColumnType="DATE"
-    AliasName="HIREDATE"
-    Expression="HIREDATE"
-    SQLType="DATE"/>
-  <ViewAttribute
-    Name="Sal"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="7"
-    Scale="2"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="SAL"
-    Expression="SAL"
-    SQLType="NUMERIC"/>
-  <ViewAttribute
-    Name="Comm"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="7"
-    Scale="2"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="COMM"
-    Expression="COMM"
-    SQLType="NUMERIC"/>
-  <ViewAttribute
-    Name="Deptno"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="2"
-    Scale="0"
-    Type="java.lang.Integer"
-    ColumnType="NUMBER"
-    AliasName="DEPTNO"
-    Expression="DEPTNO"
+    AliasName="DEPARTMENT_ID"
+    Expression="DEPARTMENT_ID"
     SQLType="NUMERIC"/>
   <AttrArray Name="KeyAttributes">
-    <Item Value="Empno"/>
+    <Item Value="EmployeeId"/>
   </AttrArray>
   <ResourceBundle>
     <PropertiesBundle

@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
    <AppModuleConfigBag ApplicationName="model.AppModule">
-      <AppModuleConfig name="1746C0FF257" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/GenxDS" ApplicationName="model.AppModule" jbo.project="model.Model" BC4JConfigName="AppModuleLocal" JDBCName="Genx" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
-         <Database JDBCDataSource="java:comp/env/jdbc/GenxDS" jbo.SQLBuilder="Oracle" jbo.locking.mode="optimistic" jbo.TypeMapEntries="Java"/>
+      <AppModuleConfig name="1747756EA48" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/Genx11gDS" ApplicationName="model.AppModule" jbo.project="model.Model" BC4JConfigName="AppModuleLocal" JDBCName="Genx11g" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database JDBCDataSource="java:comp/env/jdbc/Genx11gDS" jbo.SQLBuilder="Oracle" jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
          <Security AppModuleJndiName="model.AppModule"/>
          <Tester FullProxyInterfaceName="model.common.AppModule"/>
          <Custom ns0:LastUsedConfiguration="AppModuleLocal" ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>

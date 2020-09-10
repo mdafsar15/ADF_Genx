@@ -3,7 +3,7 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="DeptVO"
+  Name="JobsView"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
@@ -16,49 +16,43 @@
   <Properties>
     <SchemaBasedProperties>
       <LABEL
-        ResId="model.DeptVO_LABEL"/>
+        ResId="model.JobsView_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
   <ViewAccessor
-    Name="AppModule_DeptVO1_1"
-    ViewObjectName="model.DeptVO"
+    Name="AppModule_JobsView1_1"
+    ViewObjectName="model.JobsView"
     AMUsageName="AppModule"
-    ViewInstanceName="DeptVO1"
-    RowLevelBinds="true"/>
-  <ViewAccessor
-    Name="AppModule_DeptVO1_2"
-    ViewObjectName="model.DeptVO"
-    AMUsageName="AppModule"
-    ViewInstanceName="DeptVO1"
+    ViewInstanceName="JobsView1"
     RowLevelBinds="true"/>
   <ListBinding
-    Name="LOV_Deptno"
-    ListVOName="AppModule_DeptVO1_2"
+    Name="LOV_JobId"
+    ListVOName="AppModule_JobsView1_1"
     NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
-      <Item Value="Deptno"/>
+      <Item Value="JobId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="Deptno"/>
+      <Item Value="JobId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Dname"/>
+      <Item Value="JobTitle"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
   <EntityUsage
-    Name="DeptEO"
-    Entity="model.DeptEO"/>
+    Name="JobsEO"
+    Entity="model.JobsEO"/>
   <ViewAttribute
-    Name="Deptno"
+    Name="JobId"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Deptno"
-    EntityUsage="DeptEO"
-    AliasName="DEPTNO"
-    LOVName="LOV_Deptno">
+    EntityAttrName="JobId"
+    EntityUsage="JobsEO"
+    AliasName="JOB_ID"
+    LOVName="LOV_JobId">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -67,17 +61,24 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="Dname"
+    Name="JobTitle"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Dname"
-    EntityUsage="DeptEO"
-    AliasName="DNAME"/>
+    EntityAttrName="JobTitle"
+    EntityUsage="JobsEO"
+    AliasName="JOB_TITLE"/>
   <ViewAttribute
-    Name="Loc"
+    Name="MaxSalary"
     PrecisionRule="true"
-    EntityAttrName="Loc"
-    EntityUsage="DeptEO"
-    AliasName="LOC"/>
+    EntityAttrName="MaxSalary"
+    EntityUsage="JobsEO"
+    AliasName="MAX_SALARY"/>
+  <ViewAttribute
+    Name="MinSalary"
+    PrecisionRule="true"
+    EntityAttrName="MinSalary"
+    EntityUsage="JobsEO"
+    AliasName="MIN_SALARY"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
