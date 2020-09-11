@@ -59,6 +59,13 @@
     AssociationOtherEnd="model.EmpDeptAssoc.DepartmentsEO"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="LocationEO"
+    Association="model.DeptLocFkAssoc"
+    AssociationEnd="model.DeptLocFkAssoc.LocationEO"
+    AssociationOtherEnd="model.DeptLocFkAssoc.DepartmentsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="DeptIdPk"
     PrimaryKey="true">

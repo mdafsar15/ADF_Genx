@@ -52,6 +52,13 @@
     AssociationOtherEnd="model.CountrRegFkAssoc.CountryEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="LocationEO"
+    Association="model.LocCIdFkAssoc"
+    AssociationEnd="model.LocCIdFkAssoc.LocationEO"
+    AssociationOtherEnd="model.LocCIdFkAssoc.CountryEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CountryCIdPk"
     PrimaryKey="true">

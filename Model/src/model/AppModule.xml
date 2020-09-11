@@ -16,10 +16,22 @@
   <ViewUsage
     Name="EmployeesView1"
     ViewObjectName="model.EmployeesView"/>
+  <ViewUsage
+    Name="LocationView1"
+    ViewObjectName="model.LocationView"/>
+  <ViewUsage
+    Name="DepartmentView2"
+    ViewObjectName="model.DepartmentView"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"
     SrcViewUsageName="model.AppModule.DepartmentView1"
     DstViewUsageName="model.AppModule.EmployeesView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="LocaDeptVL1"
+    ViewLinkObjectName="model.LocaDeptVL"
+    SrcViewUsageName="model.AppModule.LocationView1"
+    DstViewUsageName="model.AppModule.DepartmentView2"
     Reversed="false"/>
 </AppModule>
