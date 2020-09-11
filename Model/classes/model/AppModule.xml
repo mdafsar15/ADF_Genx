@@ -10,4 +10,16 @@
   <ViewUsage
     Name="EmployeesDeptVO1"
     ViewObjectName="model.EmployeesDeptVO"/>
+  <ViewUsage
+    Name="DepartmentView1"
+    ViewObjectName="model.DepartmentView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="DeptEmpVL1"
+    ViewLinkObjectName="model.DeptEmpVL"
+    SrcViewUsageName="model.AppModule.DepartmentView1"
+    DstViewUsageName="model.AppModule.EmployeesView1"
+    Reversed="false"/>
 </AppModule>
