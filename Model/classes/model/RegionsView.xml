@@ -35,6 +35,21 @@
     EntityAttrName="RegionName"
     EntityUsage="RegionsEO"
     AliasName="REGION_NAME"/>
+  <ViewAttribute
+    Name="No_Of_Countries"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="NUMERIC">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="RegionsViewRow"/>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="CountriesView"
     ViewLink="model.CountryRegionVL"

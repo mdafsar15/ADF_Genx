@@ -1,0 +1,12 @@
+//Groovy Scripts for model.RegionsView
+
+package model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="No_Of_Countries")
+def No_Of_Countries_ExpressionScript_Expression()
+{
+CountriesView.count("CountryId==null?0:CountryId")
+}
+

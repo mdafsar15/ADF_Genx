@@ -8,6 +8,6 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
-    Name="DepartmentView1"
-    ViewObjectName="model.DepartmentView"/>
+    Name="RegionsView1"
+    ViewObjectName="model.RegionsView"/>
 </AppModule>
