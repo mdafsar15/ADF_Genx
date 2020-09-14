@@ -12,7 +12,14 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  RowClass="model.EmployeesViewRowImpl"
+  ComponentClass="model.EmployeesViewImpl"
+  DefClass="model.EmployeesViewDefImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Def|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewAccessor
     Name="AppModule_JobsView1_1"
     ViewObjectName="model.JobsView"
