@@ -8,30 +8,42 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
-    Name="EmployeesDeptVO1"
-    ViewObjectName="model.EmployeesDeptVO"/>
+    Name="RegionsView1"
+    ViewObjectName="model.RegionsView"/>
+  <ViewUsage
+    Name="CountriesView1"
+    ViewObjectName="model.CountriesView"/>
+  <ViewUsage
+    Name="LocationView1"
+    ViewObjectName="model.LocationView"/>
   <ViewUsage
     Name="DepartmentView1"
     ViewObjectName="model.DepartmentView"/>
   <ViewUsage
     Name="EmployeesView1"
     ViewObjectName="model.EmployeesView"/>
-  <ViewUsage
-    Name="LocationView1"
-    ViewObjectName="model.LocationView"/>
-  <ViewUsage
-    Name="DepartmentView2"
-    ViewObjectName="model.DepartmentView"/>
   <ViewLinkUsage
-    Name="DeptEmpVL1"
-    ViewLinkObjectName="model.DeptEmpVL"
-    SrcViewUsageName="model.AppModule.DepartmentView1"
-    DstViewUsageName="model.AppModule.EmployeesView1"
+    Name="CountryRegionVL1"
+    ViewLinkObjectName="model.CountryRegionVL"
+    SrcViewUsageName="model.AppModule.RegionsView1"
+    DstViewUsageName="model.AppModule.CountriesView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="LocaCounVL1"
+    ViewLinkObjectName="model.LocaCounVL"
+    SrcViewUsageName="model.AppModule.CountriesView1"
+    DstViewUsageName="model.AppModule.LocationView1"
     Reversed="false"/>
   <ViewLinkUsage
     Name="LocaDeptVL1"
     ViewLinkObjectName="model.LocaDeptVL"
     SrcViewUsageName="model.AppModule.LocationView1"
-    DstViewUsageName="model.AppModule.DepartmentView2"
+    DstViewUsageName="model.AppModule.DepartmentView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DeptEmpVL1"
+    ViewLinkObjectName="model.DeptEmpVL"
+    SrcViewUsageName="model.AppModule.DepartmentView1"
+    DstViewUsageName="model.AppModule.EmployeesView1"
     Reversed="false"/>
 </AppModule>

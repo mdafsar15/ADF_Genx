@@ -65,6 +65,11 @@
     ViewLink="model.LocaDeptVL"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CountriesView"
+    ViewLink="model.LocCounVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

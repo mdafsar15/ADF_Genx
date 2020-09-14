@@ -35,6 +35,11 @@
     EntityAttrName="RegionName"
     EntityUsage="RegionsEO"
     AliasName="REGION_NAME"/>
+  <ViewLinkAccessor
+    Name="CountriesView"
+    ViewLink="model.CountryRegionVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

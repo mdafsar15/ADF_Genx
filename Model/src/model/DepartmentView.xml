@@ -47,4 +47,9 @@
     ViewLink="model.DeptEmpVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="LocationView"
+    ViewLink="model.DeptLocaVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>
