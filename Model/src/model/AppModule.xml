@@ -10,4 +10,10 @@
   <ViewUsage
     Name="EmployeesView1"
     ViewObjectName="model.EmployeesView"/>
+  <ViewUsage
+    Name="JobsView1"
+    ViewObjectName="model.JobsView"/>
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="model.DepartmentsView"/>
 </AppModule>
