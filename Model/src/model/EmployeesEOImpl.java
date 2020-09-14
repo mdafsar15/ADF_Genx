@@ -304,8 +304,7 @@ public class EmployeesEOImpl extends EntityImpl {
         super.create(attributeList);
         
         SequenceImpl sq = new SequenceImpl("SQ99",getDBTransaction());
-        this.setEmployeeId(100);
-       
+        this.setEmployeeId(sq.getSequenceNumber().intValue());
             
     }
 
