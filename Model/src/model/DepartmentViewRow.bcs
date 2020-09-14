@@ -1,0 +1,12 @@
+//Groovy Scripts for model.DepartmentView
+
+package model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="TotalSalary")
+def TotalSalary_ExpressionScript_Expression()
+{
+EmployeesView.sum("Salary==null?0:Salary")
+}
+

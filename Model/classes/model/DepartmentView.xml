@@ -42,6 +42,21 @@
     EntityAttrName="LocationId"
     EntityUsage="DepartmentsEO"
     AliasName="LOCATION_ID"/>
+  <ViewAttribute
+    Name="TotalSalary"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="NUMERIC">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="DepartmentViewRow"/>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="EmployeesView"
     ViewLink="model.DeptEmpVL"
