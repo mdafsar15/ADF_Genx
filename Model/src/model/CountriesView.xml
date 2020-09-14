@@ -12,18 +12,13 @@
   SelectList="CountryEO.COUNTRY_ID, 
        CountryEO.COUNTRY_NAME, 
        CountryEO.REGION_ID"
-  FromList="COUNTRIES CountryEO"
-  Where="REGION_ID = :bRegId">
+  FromList="COUNTRIES CountryEO">
   <Properties>
     <SchemaBasedProperties>
       <LABEL
         ResId="model.CountriesView_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <Variable
-    Name="bRegId"
-    Kind="where"
-    Type="java.lang.Integer"/>
   <EntityUsage
     Name="CountryEO"
     Entity="model.CountryEO"/>
