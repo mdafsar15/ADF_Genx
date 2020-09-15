@@ -1,5 +1,7 @@
 package model;
 
+import model.common.AppModule;
+
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewObjectImpl;
 // ---------------------------------------------------------------------
@@ -8,7 +10,7 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class AppModuleImpl extends ApplicationModuleImpl {
+public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     /**
      * This is the default constructor (do not remove).
      */
@@ -22,6 +24,14 @@ public class AppModuleImpl extends ApplicationModuleImpl {
     public EmployeesViewImpl getEmployeesView1() {
         return (EmployeesViewImpl) findViewObject("EmployeesView1");
     }
+    
+    
+    public int add(int x, int y){
+        return(x+y);
+    }
+    
+    
+    
 
     /**
      * Container's getter for JobsView1.

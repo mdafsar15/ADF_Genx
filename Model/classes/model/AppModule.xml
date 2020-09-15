@@ -8,7 +8,8 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true"
   ComponentClass="model.AppModuleImpl"
-  DefClass="model.AppModuleDefImpl">
+  DefClass="model.AppModuleDefImpl"
+  ComponentInterface="model.common.AppModule">
   <DesignTime>
     <Attr Name="_isDefCodegen" Value="true"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -22,4 +23,20 @@
   <ViewUsage
     Name="DepartmentsView1"
     ViewObjectName="model.DepartmentsView"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="add"
+      MethodName="add">
+      <Return
+        Name="_return_type_"
+        Type="int"/>
+      <Parameter
+        Name="x"
+        Type="int"/>
+      <Parameter
+        Name="y"
+        Type="int"/>
+    </Method>
+  </ClientInterface>
 </AppModule>
