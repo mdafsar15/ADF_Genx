@@ -39,7 +39,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         String fname="";
         while(rs.hasNext()){
             Row r = rs.next();
-            fname = fname + r.getAttribute("FirstName");
+            fname = fname +"," + r.getAttribute("FirstName");
         }
         return fname;
     }
