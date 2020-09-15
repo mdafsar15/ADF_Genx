@@ -4,6 +4,7 @@ import model.common.AppModule;
 
 import oracle.jbo.Row;
 import oracle.jbo.RowSetIterator;
+import oracle.jbo.ViewCriteria;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewObjectImpl;
 // ---------------------------------------------------------------------
@@ -49,6 +50,22 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         ViewObjectImpl vo = this.getEmployeesView1();
         vo.setNamedWhereClauseParam("bDeptId", d);
         vo.executeQuery();
+        RowSetIterator rs = vo.createRowSetIterator(null);
+        String fname="";
+        while(rs.hasNext()){
+            Row r = rs.next();
+            fname = fname +"," + r.getAttribute("FirstName");
+        }
+        return fname;
+    }
+    
+    public String applyFndByDeptIdVC(int d){
+        ViewObjectImpl vo = this.getEmployeesView1();
+        ViewCriteria vc = vo.getViewCriteria("findByDeptId");
+        vo.setNamedWhereClauseParam("bDeptId", d);
+        vo.applyViewCriteria(vc);
+        vo.executeQuery();
+        
         RowSetIterator rs = vo.createRowSetIterator(null);
         String fname="";
         while(rs.hasNext()){

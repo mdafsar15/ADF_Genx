@@ -55,5 +55,15 @@
         Name="d"
         Type="int"/>
     </Method>
+    <Method
+      Name="applyFndByDeptIdVC"
+      MethodName="applyFndByDeptIdVC">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="d"
+        Type="int"/>
+    </Method>
   </ClientInterface>
 </AppModule>

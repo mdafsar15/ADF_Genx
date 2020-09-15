@@ -15,20 +15,21 @@ public class EmployeesViewImpl extends ViewObjectImpl {
     public EmployeesViewImpl() {
     }
 
+
     /**
-     * Returns the bind variable value for bDeptId.
-     * @return bind variable value for bDeptId
+     * Returns the variable value for bDeptId.
+     * @return variable value for bDeptId
      */
     public Integer getbDeptId() {
-        return (Integer) getNamedWhereClauseParam("bDeptId");
+        return (Integer) ensureVariableManager().getVariableValue("bDeptId");
     }
 
     /**
-     * Sets <code>value</code> for bind variable bDeptId.
+     * Sets <code>value</code> for variable bDeptId.
      * @param value value to bind as bDeptId
      */
     public void setbDeptId(Integer value) {
-        setNamedWhereClauseParam("bDeptId", value);
+        ensureVariableManager().setVariableValue("bDeptId", value);
     }
 }
 
