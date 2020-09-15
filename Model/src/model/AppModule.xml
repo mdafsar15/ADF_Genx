@@ -45,5 +45,15 @@
         Name="_return_type_"
         Type="java.lang.String"/>
     </Method>
+    <Method
+      Name="runQueryWithParams"
+      MethodName="runQueryWithParams">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="d"
+        Type="int"/>
+    </Method>
   </ClientInterface>
 </AppModule>

@@ -9,5 +9,7 @@ public interface AppModule extends ApplicationModule {
     int add(int x, int y);
 
     String runQry();
+
+    String runQueryWithParams(int d);
 }
 

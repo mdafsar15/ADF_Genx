@@ -6,20 +6,33 @@
   Name="EmployeesView"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="OracleName"
   CustomQuery="false"
-  SelectAllAttributes="false"
   PageIterMode="Full"
   RowClass="model.EmployeesViewRowImpl"
   ComponentClass="model.EmployeesViewImpl"
-  DefClass="model.EmployeesViewDefImpl">
+  DefClass="model.EmployeesViewDefImpl"
+  SelectList="EmployeesEO.EMPLOYEE_ID, 
+       EmployeesEO.FIRST_NAME, 
+       EmployeesEO.LAST_NAME, 
+       EmployeesEO.EMAIL, 
+       EmployeesEO.PHONE_NUMBER, 
+       EmployeesEO.HIRE_DATE, 
+       EmployeesEO.JOB_ID, 
+       EmployeesEO.SALARY, 
+       EmployeesEO.COMMISSION_PCT, 
+       EmployeesEO.MANAGER_ID, 
+       EmployeesEO.DEPARTMENT_ID"
+  FromList="EMPLOYEES EmployeesEO"
+  Where="Department_id = :bDeptId">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Def|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
+  <Variable
+    Name="bDeptId"
+    Kind="where"
+    Type="java.lang.Integer"/>
   <ViewAccessor
     Name="AppModule_JobsView1_1"
     ViewObjectName="model.JobsView"

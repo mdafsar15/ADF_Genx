@@ -45,6 +45,19 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     }
     
     
+    public String runQueryWithParams(int d){
+        ViewObjectImpl vo = this.getEmployeesView1();
+        vo.setNamedWhereClauseParam("bDeptId", d);
+        vo.executeQuery();
+        RowSetIterator rs = vo.createRowSetIterator(null);
+        String fname="";
+        while(rs.hasNext()){
+            Row r = rs.next();
+            fname = fname +"," + r.getAttribute("FirstName");
+        }
+        return fname;
+    }
+    
     
 
     /**
