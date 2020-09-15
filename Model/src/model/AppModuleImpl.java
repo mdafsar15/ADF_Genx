@@ -2,6 +2,8 @@ package model;
 
 import model.common.AppModule;
 
+import oracle.jbo.Row;
+import oracle.jbo.RowSetIterator;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewObjectImpl;
 // ---------------------------------------------------------------------
@@ -28,6 +30,18 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     
     public int add(int x, int y){
         return(x+y);
+    }
+    
+    public String runQry(){
+        ViewObjectImpl vo = this.getEmployeesView1();
+        vo.executeQuery();
+        RowSetIterator rs = vo.createRowSetIterator(null);
+        String fname="";
+        while(rs.hasNext()){
+            Row r = rs.next();
+            fname = fname + r.getAttribute("FirstName");
+        }
+        return fname;
     }
     
     

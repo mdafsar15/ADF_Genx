@@ -38,5 +38,12 @@
         Name="y"
         Type="int"/>
     </Method>
+    <Method
+      Name="runQry"
+      MethodName="runQry">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
   </ClientInterface>
 </AppModule>

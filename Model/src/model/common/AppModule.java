@@ -7,5 +7,7 @@ import oracle.jbo.ApplicationModule;
 // ---------------------------------------------------------------------
 public interface AppModule extends ApplicationModule {
     int add(int x, int y);
+
+    String runQry();
 }
 
