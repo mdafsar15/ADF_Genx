@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="page3PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="int" Name="add_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.add.result}"/>
+      <variable Type="int" Name="add_x" IsQueriable="false"/>
+      <variable Type="int" Name="add_y" IsQueriable="false"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="add" RequiresUpdateModel="true" Action="invokeMethod" MethodName="add" IsViewObjectMethod="false"
+                  DataControl="AppModuleDataControl" InstanceName="bindings.add.dataControl.dataProvider"
+                  ReturnName="data.AppModuleDataControl.methodResults.add_add_dataControl_dataProvider_add_result">
+      <NamedData NDName="x" NDType="int" NDValue="${bindings.add_x}"/>
+      <NamedData NDName="y" NDType="int" NDValue="${bindings.add_y}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="x">
+      <AttrNames>
+        <Item Value="add_x"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="y">
+      <AttrNames>
+        <Item Value="add_y"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="return">
+      <AttrNames>
+        <Item Value="add_return"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

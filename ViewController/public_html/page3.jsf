@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="page3.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelBox text="PanelBox1" id="pb1">
+                <f:facet name="toolbar"/>
+                <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.x.inputValue}" label="#{bindings.x.hints.label}"
+                                  required="#{bindings.x.hints.mandatory}" columns="#{bindings.x.hints.displayWidth}"
+                                  maximumLength="#{bindings.x.hints.precision}" shortDesc="#{bindings.x.hints.tooltip}"
+                                  id="it1">
+                        <f:validator binding="#{bindings.x.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.y.inputValue}" label="#{bindings.y.hints.label}"
+                                  required="#{bindings.y.hints.mandatory}" columns="#{bindings.y.hints.displayWidth}"
+                                  maximumLength="#{bindings.y.hints.precision}" shortDesc="#{bindings.y.hints.tooltip}"
+                                  id="it2">
+                        <f:validator binding="#{bindings.y.validator}"/>
+                    </af:inputText>
+                    <af:button actionListener="#{bindings.add.execute}" text="add" disabled="#{!bindings.add.enabled}"
+                               id="b1"/>
+                    <af:outputText value="#{bindings.return.inputValue}" shortDesc="#{bindings.return.hints.tooltip}"
+                                   id="ot1"/>
+                </af:panelFormLayout>
+            </af:panelBox>
+        </af:form>
+    </af:document>
+</f:view>
