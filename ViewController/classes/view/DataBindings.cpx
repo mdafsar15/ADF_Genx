@@ -6,12 +6,14 @@
     <page path="/page1.jsf" usageId="view_page1PageDef"/>
     <page path="/page2.jsf" usageId="view_page2PageDef"/>
     <page path="/page3.jsf" usageId="view_page3PageDef"/>
+    <page path="/page4.jsf" usageId="view_page4PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
     <page id="view_page1PageDef" path="view.pageDefs.page1PageDef"/>
     <page id="view_page2PageDef" path="view.pageDefs.page2PageDef"/>
     <page id="view_page3PageDef" path="view.pageDefs.page3PageDef"/>
+    <page id="view_page4PageDef" path="view.pageDefs.page4PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
