@@ -15,14 +15,23 @@
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="model.DepartmentsView"/>
+  <ViewUsage
+    Name="DepartmentView1"
+    ViewObjectName="model.DepartmentView"/>
+  <ViewUsage
     Name="EmployeesView1"
     ViewObjectName="model.EmployeesView"/>
   <ViewUsage
-    Name="JobsView1"
-    ViewObjectName="model.JobsView"/>
-  <ViewUsage
-    Name="DepartmentsView1"
-    ViewObjectName="model.DepartmentsView"/>
+    Name="EmployeesView2"
+    ViewObjectName="model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="DeptEmpVL1"
+    ViewLinkObjectName="model.DeptEmpVL"
+    SrcViewUsageName="model.AppModule.DepartmentView1"
+    DstViewUsageName="model.AppModule.EmployeesView2"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
     <Method

@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Page5.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelBox text="PanelBox1" id="pb1">
+                    <f:facet name="toolbar"/>
+                    <af:panelGroupLayout layout="vertical" id="pgl1">
+                        <af:panelHeader text="DepartmentView1" id="ph1">
+                            <af:panelFormLayout id="pfl1">
+                                <af:panelLabelAndMessage label="#{bindings.DepartmentId.hints.label}" id="plam1">
+                                    <af:outputText value="#{bindings.DepartmentId.inputValue}"
+                                                   shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="ot1">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.DepartmentId.format}"/>
+                                    </af:outputText>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="#{bindings.DepartmentName.hints.label}" id="plam2">
+                                    <af:outputText value="#{bindings.DepartmentName.inputValue}"
+                                                   shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="ot2"/>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="#{bindings.ManagerId.hints.label}" id="plam3">
+                                    <af:outputText value="#{bindings.ManagerId.inputValue}"
+                                                   shortDesc="#{bindings.ManagerId.hints.tooltip}" id="ot3">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+                                    </af:outputText>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="#{bindings.LocationId.hints.label}" id="plam4">
+                                    <af:outputText value="#{bindings.LocationId.inputValue}"
+                                                   shortDesc="#{bindings.LocationId.hints.tooltip}" id="ot4">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
+                                    </af:outputText>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="#{bindings.TotalSalary.hints.label}" id="plam5">
+                                    <af:outputText value="#{bindings.TotalSalary.inputValue}"
+                                                   shortDesc="#{bindings.TotalSalary.hints.tooltip}" id="ot5">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.TotalSalary.format}"/>
+                                    </af:outputText>
+                                </af:panelLabelAndMessage>
+                                <f:facet name="footer">
+                                    <af:panelGroupLayout layout="horizontal" id="pgl2">
+                                        <f:facet name="separator">
+                                            <af:spacer width="10" height="1" id="s1"/>
+                                        </f:facet>
+                                        <af:button actionListener="#{bindings.First.execute}" text="First"
+                                                   disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
+                                        <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                                                   disabled="#{!bindings.Previous.enabled}" partialSubmit="true"
+                                                   id="b2"/>
+                                        <af:button actionListener="#{bindings.Next.execute}" text="Next"
+                                                   disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b3"/>
+                                        <af:button actionListener="#{bindings.Last.execute}" text="Last"
+                                                   disabled="#{!bindings.Last.enabled}" partialSubmit="true" id="b4"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                            </af:panelFormLayout>
+                        </af:panelHeader>
+                        <af:panelHeader text="EmployeesView2" id="ph2">
+                            <af:table rows="#{bindings.EmployeesView2.rangeSize}"
+                                      fetchSize="#{bindings.EmployeesView2.rangeSize}"
+                                      emptyText="#{bindings.EmployeesView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      var="row" value="#{bindings.EmployeesView2.collectionModel}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.EmployeesView2.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.EmployeesView2.collectionModel.makeCurrent}"
+                                      rowSelection="single" id="t1">
+                                <af:column headerText="#{bindings.EmployeesView2.hints.EmployeeId.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.EmployeeId.name}"
+                                           sortable="false" id="c1">
+                                    <af:outputText value="#{row.EmployeeId}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.EmployeeId.tooltip}"
+                                                   id="ot6">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.EmployeesView2.hints.EmployeeId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.FirstName.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.FirstName.name}"
+                                           sortable="false" id="c2">
+                                    <af:outputText value="#{row.FirstName}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.FirstName.tooltip}"
+                                                   id="ot7"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.LastName.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.LastName.name}"
+                                           sortable="false" id="c3">
+                                    <af:outputText value="#{row.LastName}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.LastName.tooltip}"
+                                                   id="ot8"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.Email.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.Email.name}" sortable="false"
+                                           id="c4">
+                                    <af:outputText value="#{row.Email}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.Email.tooltip}" id="ot9"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.PhoneNumber.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.PhoneNumber.name}"
+                                           sortable="false" id="c5">
+                                    <af:outputText value="#{row.PhoneNumber}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.PhoneNumber.tooltip}"
+                                                   id="ot10"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.HireDate.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.HireDate.name}"
+                                           sortable="false" id="c6">
+                                    <af:outputText value="#{row.HireDate}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.HireDate.tooltip}"
+                                                   id="ot11">
+                                        <af:convertDateTime pattern="#{bindings.EmployeesView2.hints.HireDate.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.JobId.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.JobId.name}" sortable="false"
+                                           id="c7">
+                                    <af:outputText value="#{row.JobId}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.JobId.tooltip}"
+                                                   id="ot12"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.Salary.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.Salary.name}" sortable="false"
+                                           id="c8">
+                                    <af:outputText value="#{row.Salary}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.Salary.tooltip}"
+                                                   id="ot13">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.EmployeesView2.hints.Salary.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.CommissionPct.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.CommissionPct.name}"
+                                           sortable="false" id="c9">
+                                    <af:outputText value="#{row.CommissionPct}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.CommissionPct.tooltip}"
+                                                   id="ot14">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.EmployeesView2.hints.CommissionPct.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.ManagerId.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.ManagerId.name}"
+                                           sortable="false" id="c10">
+                                    <af:outputText value="#{row.ManagerId}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.ManagerId.tooltip}"
+                                                   id="ot15">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.EmployeesView2.hints.ManagerId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.EmployeesView2.hints.DepartmentId.label}"
+                                           sortProperty="#{bindings.EmployeesView2.hints.DepartmentId.name}"
+                                           sortable="false" id="c11">
+                                    <af:outputText value="#{row.DepartmentId}"
+                                                   shortDesc="#{bindings.EmployeesView2.hints.DepartmentId.tooltip}"
+                                                   id="ot16">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.EmployeesView2.hints.DepartmentId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelHeader>
+                    </af:panelGroupLayout>
+                </af:panelBox>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

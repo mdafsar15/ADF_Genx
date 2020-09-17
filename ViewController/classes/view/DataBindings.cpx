@@ -10,6 +10,8 @@
     <page path="/view1.jsf" usageId="view_view1PageDef"/>
     <page path="/view2.jsf" usageId="view_view2PageDef"/>
     <page path="PageFlow#CreateInsert" usageId="view_adfc_config___CreateInsertPageDef"/>
+    <page path="/Page5.jspx" usageId="view_Page5PageDef"/>
+    <page path="/untitled2.jsf" usageId="view_untitled2PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -20,6 +22,8 @@
     <page id="view_view1PageDef" path="view.pageDefs.view1PageDef"/>
     <page id="view_view2PageDef" path="view.pageDefs.view2PageDef"/>
     <page id="view_adfc_config___CreateInsertPageDef" path="view.pageDefs.adfc_config___CreateInsertPageDef"/>
+    <page id="view_Page5PageDef" path="view.pageDefs.Page5PageDef"/>
+    <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
