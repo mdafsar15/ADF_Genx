@@ -12,6 +12,10 @@
       <from-outcome>edit</from-outcome>
       <to-activity-id>view2</to-activity-id>
     </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome>new</from-outcome>
+      <to-activity-id>view2</to-activity-id>
+    </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__5">
     <from-activity-id>view2</from-activity-id>

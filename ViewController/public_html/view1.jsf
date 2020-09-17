@@ -77,6 +77,7 @@
                     </af:column>
                 </af:table>
                 <af:button text="Edit" id="b1" action="edit"/>
+                <af:button text="New" id="b2" action="new"/>
             </af:panelBox>
         </af:form>
     </af:document>

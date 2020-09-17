@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R50,50.0,143.44238,249.0,138.44238,L50</property>
+         name="sdm:polyPoints">R50,50.087925,143.44238,248.91202,138.44238,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -51,5 +51,15 @@
          name="fromOutcome">back</property>
       <property
          name="sdm:polyPoints">L54,249.0,141.94238,50.087925,146.94238,R54</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">new</property>
+      <property
+         name="sdm:polyPoints">R42,50.0,136.44238,248.82407,131.44238,L42</property>
    </ControlFlowCase>
 </SDM>
