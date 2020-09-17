@@ -13,4 +13,11 @@
       <to-activity-id>view2</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
+  <control-flow-rule id="__5">
+    <from-activity-id>view2</from-activity-id>
+    <control-flow-case id="__6">
+      <from-outcome>back</from-outcome>
+      <to-activity-id>view1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
 </adfc-config>

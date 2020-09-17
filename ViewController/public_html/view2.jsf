@@ -94,6 +94,7 @@
                            disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b2">
                     <af:resetActionListener/>
                 </af:button>
+                <af:button text="Back" id="b3" action="back"/>
             </af:panelBox>
         </af:form>
     </af:document>

@@ -7,11 +7,11 @@
       <property
          name="activityId">view1</property>
       <property
-         name="x">373.0</property>
+         name="x">9.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">144.49414</property>
+         name="y">143.79297</property>
       <property
          name="page">/view1.jsf</property>
       <property
@@ -22,11 +22,11 @@
       <property
          name="activityId">view2</property>
       <property
-         name="x">656.0</property>
+         name="x">290.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>view2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">142.49414</property>
+         name="y">138.79297</property>
       <property
          name="page">/view2.jsf</property>
       <property
@@ -40,6 +40,16 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R50,414.0,144.14355,615.0,142.14355,L50</property>
+         name="sdm:polyPoints">R50,50.0,143.44238,249.0,138.44238,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">back</property>
+      <property
+         name="sdm:polyPoints">L54,249.0,141.94238,50.087925,146.94238,R54</property>
    </ControlFlowCase>
 </SDM>
