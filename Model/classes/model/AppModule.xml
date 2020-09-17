@@ -69,7 +69,7 @@
       MethodName="applyFndByDeptIdVC">
       <Return
         Name="_return_type_"
-        Type="java.lang.String"/>
+        Type="void"/>
       <Parameter
         Name="d"
         Type="int"/>

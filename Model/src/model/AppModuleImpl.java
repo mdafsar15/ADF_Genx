@@ -52,22 +52,30 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return fname;
     }
     
-    public String applyFndByDeptIdVC(int d){
+//    public String applyFndByDeptIdVC(int d){
+//        ViewObjectImpl vo = this.getEmployeesView1();
+//        ViewCriteria vc = vo.getViewCriteria("findByDeptId");
+//        vo.setNamedWhereClauseParam("bDeptId", d);
+//        vo.applyViewCriteria(vc);
+//        vo.executeQuery();
+//        
+//        RowSetIterator rs = vo.createRowSetIterator(null);
+//        String fname="";
+//        while(rs.hasNext()){
+//            Row r = rs.next();
+//            fname = fname +"," + r.getAttribute("FirstName");
+//        }
+//        return fname;
+//    }
+
+ 
+    public void applyFndByDeptIdVC(int d){
         ViewObjectImpl vo = this.getEmployeesView1();
         ViewCriteria vc = vo.getViewCriteria("findByDeptId");
         vo.setNamedWhereClauseParam("bDeptId", d);
         vo.applyViewCriteria(vc);
         vo.executeQuery();
-        
-        RowSetIterator rs = vo.createRowSetIterator(null);
-        String fname="";
-        while(rs.hasNext()){
-            Row r = rs.next();
-            fname = fname +"," + r.getAttribute("FirstName");
-        }
-        return fname;
     }
-
 
     /**
      * Container's getter for DepartmentsView1.

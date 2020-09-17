@@ -12,6 +12,6 @@ public interface AppModule extends ApplicationModule {
 
     String runQueryWithParams(int d);
 
-    String applyFndByDeptIdVC(int d);
+    void applyFndByDeptIdVC(int d);
 }
 
