@@ -105,8 +105,7 @@
                            disabled="#{!bindings.CreateInsert.enabled}" id="b5"/>
                 <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                            disabled="#{!bindings.Delete.enabled}" id="b6"/>
-                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                           disabled="#{!bindings.Commit.enabled}" id="b7"/>
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b7"/>
                 <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
                            disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b8">
                     <af:resetActionListener/>
