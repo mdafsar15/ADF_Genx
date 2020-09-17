@@ -15,11 +15,7 @@
                           rowSelection="single" fetchSize="#{bindings.EmployeesView1.rangeSize}" id="t1"
                           partialTriggers="::b2">
                     <af:column headerText="#{bindings.EmployeesView1.hints.EmployeeId.label}" id="c1">
-                        <af:outputText value="#{row.EmployeeId}"
-                                       shortDesc="#{bindings.EmployeesView1.hints.EmployeeId.tooltip}" id="ot1">
-                            <af:convertNumber groupingUsed="false"
-                                              pattern="#{bindings.EmployeesView1.hints.EmployeeId.format}"/>
-                        </af:outputText>
+                        <af:link text="#{row.EmployeeId}" id="l1" action="edit"/>
                     </af:column>
                     <af:column headerText="#{bindings.EmployeesView1.hints.FirstName.label}" id="c2">
                         <af:outputText value="#{row.FirstName}"
