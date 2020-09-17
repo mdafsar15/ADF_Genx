@@ -7,11 +7,13 @@
       <property
          name="activityId">view1</property>
       <property
-         name="x">7.0</property>
+         name="x">373.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">177.19531</property>
+         name="y">144.49414</property>
+      <property
+         name="page">/view1.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -20,11 +22,13 @@
       <property
          name="activityId">view2</property>
       <property
-         name="x">249.0</property>
+         name="x">656.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>view2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">173.89648</property>
+         name="y">142.49414</property>
+      <property
+         name="page">/view2.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -36,6 +40,6 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R50,48.0,176.84473,208.0,173.5459,L50</property>
+         name="sdm:polyPoints">R50,414.0,144.14355,615.0,142.14355,L50</property>
    </ControlFlowCase>
 </SDM>
