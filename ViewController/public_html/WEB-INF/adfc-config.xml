@@ -24,6 +24,9 @@
       <fixed-outcome>applyFndByDeptIdVC</fixed-outcome>
     </outcome>
   </method-call>
+  <view id="popup">
+    <page>/popup.jspx</page>
+  </view>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
