@@ -6,15 +6,21 @@
   <view id="view2">
     <page>/view2.jsf</page>
   </view>
+  <method-call id="CreateInsert">
+    <method>#{bindings.CreateInsert.execute}</method>
+    <outcome>
+      <fixed-outcome>CreateInsert</fixed-outcome>
+    </outcome>
+  </method-call>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
       <from-outcome>edit</from-outcome>
       <to-activity-id>view2</to-activity-id>
     </control-flow-case>
-    <control-flow-case id="__7">
+    <control-flow-case id="__8">
       <from-outcome>new</from-outcome>
-      <to-activity-id>view2</to-activity-id>
+      <to-activity-id>CreateInsert</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__5">
@@ -22,6 +28,13 @@
     <control-flow-case id="__6">
       <from-outcome>back</from-outcome>
       <to-activity-id>view1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__9">
+    <from-activity-id>CreateInsert</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>CreateInsert</from-outcome>
+      <to-activity-id>view2</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
 </adfc-config>

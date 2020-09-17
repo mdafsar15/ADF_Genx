@@ -22,11 +22,11 @@
       <property
          name="activityId">view2</property>
       <property
-         name="x">290.0</property>
+         name="x">291.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>view2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">138.79297</property>
+         name="y">81.0918</property>
       <property
          name="page">/view2.jsf</property>
       <property
@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R50,50.087925,143.44238,248.91202,138.44238,L50</property>
+         name="sdm:polyPoints">R46,50.0,139.94238,248.92569,77.24121,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -50,16 +50,39 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,249.0,141.94238,50.087925,146.94238,R54</property>
+         name="sdm:polyPoints">L54,250.0,84.24121,51.071556,146.94238,R54</property>
    </ControlFlowCase>
+   <MethodCall
+      id="MethodCall8">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="x">187.01465</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">297.44824</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase7"
+      id="ControlFlowCase9"
       from="View2"
-      to="View3">
+      to="MethodCall8">
       <property
          name="fromOutcome">new</property>
       <property
-         name="sdm:polyPoints">R42,50.0,136.44238,248.82407,131.44238,L42</property>
+         name="sdm:polyPoints">B50,9.0,197.44238,146.01465,297.09766,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="MethodCall8"
+      to="View3">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">T50,187.01465,243.09766,291.0,134.74121,B50</property>
    </ControlFlowCase>
 </SDM>
