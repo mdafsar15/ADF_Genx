@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="master.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                    <af:table value="#{bindings.DepartmentView1.collectionModel}" var="row"
+                              rows="#{bindings.DepartmentView1.rangeSize}"
+                              emptyText="#{bindings.DepartmentView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.DepartmentView1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.DepartmentView1.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.DepartmentView1.rangeSize}" id="t1">
+                        <af:column headerText="#{bindings.DepartmentView1.hints.DepartmentId.label}" id="c1">
+                            <af:link text="#{row.DepartmentId}" id="l1" action="getEmps">
+                                <af:setPropertyListener from=" #{row.DepartmentId}" to="#{pageFlowScope.x}"
+                                                        type="action"/>
+                            </af:link>
+                        </af:column>
+                        <af:column headerText="#{bindings.DepartmentView1.hints.DepartmentName.label}" id="c2">
+                            <af:outputText value="#{row.DepartmentName}"
+                                           shortDesc="#{bindings.DepartmentView1.hints.DepartmentName.tooltip}"
+                                           id="ot2"/>
+                        </af:column>
+                        <af:column headerText="#{bindings.DepartmentView1.hints.ManagerId.label}" id="c3">
+                            <af:outputText value="#{row.ManagerId}"
+                                           shortDesc="#{bindings.DepartmentView1.hints.ManagerId.tooltip}" id="ot3">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DepartmentView1.hints.ManagerId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.DepartmentView1.hints.LocationId.label}" id="c4">
+                            <af:outputText value="#{row.LocationId}"
+                                           shortDesc="#{bindings.DepartmentView1.hints.LocationId.tooltip}" id="ot4">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DepartmentView1.hints.LocationId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.DepartmentView1.hints.TotalSalary.label}" id="c5">
+                            <af:outputText value="#{row.TotalSalary}"
+                                           shortDesc="#{bindings.DepartmentView1.hints.TotalSalary.tooltip}" id="ot5">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DepartmentView1.hints.TotalSalary.format}"/>
+                            </af:outputText>
+                        </af:column>
+                    </af:table>
+                </af:panelCollection>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

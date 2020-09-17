@@ -85,4 +85,67 @@
       <property
          name="sdm:polyPoints">T50,187.01465,243.09766,291.0,134.74121,B50</property>
    </ControlFlowCase>
+   <View
+      id="View11">
+      <property
+         name="activityId">master</property>
+      <property
+         name="x">-145.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>master&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">400.49414</property>
+      <property
+         name="page">/master.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View12">
+      <property
+         name="activityId">detail</property>
+      <property
+         name="x">212.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>detail&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">411.79297</property>
+      <property
+         name="page">/detail.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <MethodCall
+      id="MethodCall13">
+      <property
+         name="activityId">applyFndByDeptIdVC</property>
+      <property
+         name="x">16.697266</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>applyFndByDeptIdVC&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">526.3447</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="View11"
+      to="MethodCall13">
+      <property
+         name="fromOutcome">getEmps</property>
+      <property
+         name="sdm:polyPoints">B50,-145.0,454.14355,-24.302734,525.99414,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="MethodCall13"
+      to="View12">
+      <property
+         name="fromOutcome">applyFndByDeptIdVC</property>
+      <property
+         name="sdm:polyPoints">R50,57.697266,525.99414,171.0,411.44238,L50</property>
+   </ControlFlowCase>
 </SDM>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14"
+                id="adfc_config___applyFndByDeptIdVCPageDef" Package="view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="applyFndByDeptIdVC" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="applyFndByDeptIdVC" IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.applyFndByDeptIdVC.dataControl.dataProvider">
+      <NamedData NDName="d" NDValue="#{pageFlowScope.x}" NDType="int"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

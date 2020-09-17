@@ -12,6 +12,18 @@
       <fixed-outcome>CreateInsert</fixed-outcome>
     </outcome>
   </method-call>
+  <view id="master">
+    <page>/master.jspx</page>
+  </view>
+  <view id="detail">
+    <page>/detail.jspx</page>
+  </view>
+  <method-call id="applyFndByDeptIdVC">
+    <method>#{bindings.applyFndByDeptIdVC.execute}</method>
+    <outcome>
+      <fixed-outcome>applyFndByDeptIdVC</fixed-outcome>
+    </outcome>
+  </method-call>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
@@ -35,6 +47,20 @@
     <control-flow-case id="__10">
       <from-outcome>CreateInsert</from-outcome>
       <to-activity-id>view2</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__12">
+    <from-activity-id>master</from-activity-id>
+    <control-flow-case id="__13">
+      <from-outcome>getEmps</from-outcome>
+      <to-activity-id>applyFndByDeptIdVC</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__14">
+    <from-activity-id>applyFndByDeptIdVC</from-activity-id>
+    <control-flow-case id="__15">
+      <from-outcome>applyFndByDeptIdVC</from-outcome>
+      <to-activity-id>detail</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
 </adfc-config>
