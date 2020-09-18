@@ -76,6 +76,7 @@
                         </af:column>
                     </af:table>
                 </af:panelBox>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p3"/>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p1"/>
                 <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
                     <af:dialog id="d2">

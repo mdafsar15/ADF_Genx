@@ -163,4 +163,36 @@
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View17">
+      <property
+         name="activityId">popup1</property>
+      <property
+         name="x">402.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>popup1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">622.2988</property>
+      <property
+         name="page">/popup1.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="thumbnailExpanded">false</property>
+   </View>
+   <View
+      id="View19">
+      <property
+         name="activityId">view3</property>
+      <property
+         name="x">-48.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view3&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">816.1953</property>
+      <property
+         name="page">/view3.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
 </SDM>

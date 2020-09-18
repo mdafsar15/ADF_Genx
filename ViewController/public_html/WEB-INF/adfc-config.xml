@@ -27,6 +27,12 @@
   <view id="popup">
     <page>/popup.jspx</page>
   </view>
+  <view id="popup1">
+    <page>/popup1.jspx</page>
+  </view>
+  <view id="view3">
+    <page>/view3.jspx</page>
+  </view>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
@@ -66,4 +72,9 @@
       <to-activity-id>detail</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
+  <managed-bean id="__1">
+    <managed-bean-name>MyBean</managed-bean-name>
+    <managed-bean-class>view.backing.MyClass</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

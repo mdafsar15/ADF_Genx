@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="view3.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelBox text="PanelBox1" id="pb1">
+                    <f:facet name="toolbar"/>
+                    <af:inputText label="Label 1" id="it1" value="#{backingBeanScope.MyBean.x}"/>
+                    <af:inputText label="Label 2" id="it2" value="#{backingBeanScope.MyBean.y}"/>
+                    <af:inputText label="Label 3" id="it3" value="#{backingBeanScope.MyBean.z}"/>
+                    <af:button text="Add" id="b1" actionListener="#{backingBeanScope.MyBean.addTwoNumbers}"/>
+                </af:panelBox>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
