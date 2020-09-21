@@ -1,0 +1,17 @@
+//Groovy Scripts for model.EmployeeValidateEO
+
+package model
+
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@ValidatorExpression(name="SalaryMustNotGT10000", attributeName="Salary")
+def Salary_SalaryMustNotGT10000_ValidationRuleScript_ValidationRule()
+{
+if ( newValue>10000) {
+    return false
+}
+else{
+return true
+}
+}
+

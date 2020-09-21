@@ -116,6 +116,19 @@
       Inverse="false"
       CompareType="EQUALTO"
       CompareValue="10000"/>
+    <validation:ExpressionValidationBean
+      Name="SalaryMustNotGT10000"
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:MsgIds>
+        <validation:Item
+          Value="errorId"/>
+      </validation:MsgIds>
+      <validation:TransientExpression
+        Name="ValidationRuleScript"
+        trustMode="untrusted"
+        CodeSourceName="EmployeeValidateEORow"/>
+    </validation:ExpressionValidationBean>
   </Attribute>
   <Attribute
     Name="CommissionPct"
