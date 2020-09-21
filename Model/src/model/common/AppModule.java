@@ -17,5 +17,7 @@ public interface AppModule extends ApplicationModule {
     void createRow();
 
     void removeCurrentRow();
+
+    void printCoutries();
 }
 

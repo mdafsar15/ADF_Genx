@@ -121,5 +121,12 @@
         Name="_return_type_"
         Type="void"/>
     </Method>
+    <Method
+      Name="printCoutries"
+      MethodName="printCoutries">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
   </ClientInterface>
 </AppModule>

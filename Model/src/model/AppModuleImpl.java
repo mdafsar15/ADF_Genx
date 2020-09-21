@@ -95,8 +95,16 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         newRow.remove();
         getDBTransaction().commit();
     }
-
-
+    
+    public void printCoutries(){
+        ViewObjectImpl vo = getCountryNewEOView1();
+        RowSetIterator iter =  vo.createRowSetIterator(null);
+                while(iter.hasNext()){
+                    Row r = iter.next();
+                    System.out.println(r.getAttribute("CountryName"));
+                }
+                iter.closeRowSetIterator();
+    }
 
 
     /**
