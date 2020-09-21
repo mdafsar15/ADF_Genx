@@ -189,6 +189,21 @@
     EntityAttrName="JobTitle"
     EntityUsage="JobsEO"
     AliasName="JOB_TITLE"/>
+  <ViewAttribute
+    Name="Bonus"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="NUMERIC">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="EmployeeBindingVORow"/>
+  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

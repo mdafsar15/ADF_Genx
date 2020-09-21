@@ -1,0 +1,12 @@
+//Groovy Scripts for model.EmployeeBindingVO
+
+package model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="Bonus")
+def Bonus_ExpressionScript_Expression()
+{
+Salary+1000
+}
+
