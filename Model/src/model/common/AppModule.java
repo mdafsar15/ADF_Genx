@@ -13,5 +13,7 @@ public interface AppModule extends ApplicationModule {
     String runQueryWithParams(int d);
 
     void applyFndByDeptIdVC(int d);
+
+    void createRow();
 }
 

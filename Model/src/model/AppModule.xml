@@ -32,11 +32,38 @@
   <ViewUsage
     Name="EmployeeBindingVO1"
     ViewObjectName="model.EmployeeBindingVO"/>
+  <ViewUsage
+    Name="CountryNewEOView1"
+    ViewObjectName="model.CountryNewEOView"/>
+  <ViewUsage
+    Name="LocationsView1"
+    ViewObjectName="model.LocationsView"/>
+  <ViewUsage
+    Name="RegionsView1"
+    ViewObjectName="model.RegionsView"/>
+  <ViewUsage
+    Name="CountryNewEOView2"
+    ViewObjectName="model.CountryNewEOView"/>
+  <ViewUsage
+    Name="CountryNewView1"
+    ViewObjectName="model.CountryNewView"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"
     SrcViewUsageName="model.AppModule.DepartmentView1"
     DstViewUsageName="model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="LocCIdFkAssoc1Link"
+    ViewLinkObjectName="model.LocCIdFkAssoc1Link"
+    SrcViewUsageName="model.AppModule.CountryNewEOView1"
+    DstViewUsageName="model.AppModule.LocationsView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CountrRegFkAssoc1Link"
+    ViewLinkObjectName="model.CountrRegFkAssoc1Link"
+    SrcViewUsageName="model.AppModule.RegionsView1"
+    DstViewUsageName="model.AppModule.CountryNewEOView2"
     Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
@@ -79,6 +106,13 @@
       <Parameter
         Name="d"
         Type="int"/>
+    </Method>
+    <Method
+      Name="createRow"
+      MethodName="createRow">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
     </Method>
   </ClientInterface>
 </AppModule>

@@ -55,6 +55,11 @@
     ViewLink="model.CountryRegionVL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CountryNewEOView"
+    ViewLink="model.CountrRegFkAssoc1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

@@ -60,5 +60,8 @@
     <action IterBinding="EmployeeBindingVO1Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="EmployeeBindingVO1Iterator" id="CreateInsert1"
+            InstanceName="AppModuleDataControl.EmployeeBindingVO1" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

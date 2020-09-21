@@ -98,6 +98,13 @@
     AssociationOtherEnd="model.LocCIdFkAssoc.LocationEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="CountryNewEO"
+    Association="model.LocCIdFkAssoc1"
+    AssociationEnd="model.LocCIdFkAssoc1.CountryNewEO"
+    AssociationOtherEnd="model.LocCIdFkAssoc1.LocationEO"
+    Type="model.CountryNewEOImpl"
+    IsUpdateable="true"/>
   <Key
     Name="LocIdPk"
     PrimaryKey="true">

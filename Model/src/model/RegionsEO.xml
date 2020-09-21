@@ -38,6 +38,13 @@
     AssociationOtherEnd="model.CountrRegFkAssoc.RegionsEO"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="CountryNewEO"
+    Association="model.CountrRegFkAssoc1"
+    AssociationEnd="model.CountrRegFkAssoc1.CountryNewEO"
+    AssociationOtherEnd="model.CountrRegFkAssoc1.RegionsEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="RegIdPk"
     PrimaryKey="true">

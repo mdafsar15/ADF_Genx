@@ -1,0 +1,24 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sdoJava="commonj.sdo/java" targetNamespace="/model/common/"
+     xmlns="/model/common/" elementFormDefault="qualified" sdoJava:package="model.common">
+    <xsd:annotation>
+        <xsd:documentation>
+            <name>Country New View</name>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="CountryNewViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>CountryId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="CountryId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="CountryName" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="RegionId" type="xsd:decimal" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="countryNewViewSDO" type="CountryNewViewSDO"/>
+</xsd:schema>

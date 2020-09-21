@@ -77,6 +77,21 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         vo.executeQuery();
     }
 
+
+
+    public  void createRow(){
+        ViewObjectImpl vo = getCountryNewEOView1();
+        Row newRow = vo.createRow();
+        newRow.setAttribute("CountryId", "CI");
+        newRow.setAttribute("CountryName", "CINDIA");
+        newRow.setAttribute("RegionId", "4");
+        vo.insertRow(newRow);
+        getDBTransaction().commit();
+    }
+
+
+
+
     /**
      * Container's getter for DepartmentsView1.
      * @return DepartmentsView1
@@ -133,6 +148,62 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public ViewObjectImpl getEmployeeBindingVO1() {
         return (ViewObjectImpl) findViewObject("EmployeeBindingVO1");
+    }
+
+    /**
+     * Container's getter for CountryNewEOView1.
+     * @return CountryNewEOView1
+     */
+    public ViewObjectImpl getCountryNewEOView1() {
+        return (ViewObjectImpl) findViewObject("CountryNewEOView1");
+    }
+
+    /**
+     * Container's getter for LocationsView1.
+     * @return LocationsView1
+     */
+    public ViewObjectImpl getLocationsView1() {
+        return (ViewObjectImpl) findViewObject("LocationsView1");
+    }
+
+    /**
+     * Container's getter for RegionsView1.
+     * @return RegionsView1
+     */
+    public ViewObjectImpl getRegionsView1() {
+        return (ViewObjectImpl) findViewObject("RegionsView1");
+    }
+
+    /**
+     * Container's getter for CountryNewEOView2.
+     * @return CountryNewEOView2
+     */
+    public ViewObjectImpl getCountryNewEOView2() {
+        return (ViewObjectImpl) findViewObject("CountryNewEOView2");
+    }
+
+    /**
+     * Container's getter for LocCIdFkAssoc1Link.
+     * @return LocCIdFkAssoc1Link
+     */
+    public ViewLinkImpl getLocCIdFkAssoc1Link() {
+        return (ViewLinkImpl) findViewLink("LocCIdFkAssoc1Link");
+    }
+
+    /**
+     * Container's getter for CountrRegFkAssoc1Link.
+     * @return CountrRegFkAssoc1Link
+     */
+    public ViewLinkImpl getCountrRegFkAssoc1Link() {
+        return (ViewLinkImpl) findViewLink("CountrRegFkAssoc1Link");
+    }
+
+    /**
+     * Container's getter for CountryNewView1.
+     * @return CountryNewView1
+     */
+    public CountryNewViewImpl getCountryNewView1() {
+        return (CountryNewViewImpl) findViewObject("CountryNewView1");
     }
 }
 
