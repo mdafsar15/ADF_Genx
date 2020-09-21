@@ -2,7 +2,12 @@ package view.backing;
 
 import javax.faces.event.ActionEvent;
 
+
+import oracle.adf.model.BindingContext;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
+
+import oracle.binding.BindingContainer;
+import oracle.binding.OperationBinding;
 
 public class MyClass {
     public MyClass() {
@@ -50,4 +55,11 @@ public class MyClass {
     }
 
 
+    public void createEmployee(ActionEvent actionEvent) {
+        
+        BindingContext bctx = BindingContext.getCurrent();
+        BindingContainer bc =bctx.getCurrentBindingsEntry();
+        OperationBinding ob = bc.getOperationBinding("CreateInsert");
+        ob.execute();
+    }
 }

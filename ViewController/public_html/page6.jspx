@@ -93,7 +93,7 @@
                             <f:validator binding="#{bindings.DepartmentId.validator}"/>
                         </af:selectOneChoice>
                     </af:panelFormLayout>
-                    <af:button text="New" id="b1"/>
+                    <af:button text="New" id="b1" actionListener="#{backingBeanScope.MyBean.createEmployee}"/>
                     <af:button text="commit" id="b2"/>
                 </af:panelBox>
             </af:form>
