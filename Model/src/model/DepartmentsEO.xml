@@ -66,6 +66,20 @@
     AssociationOtherEnd="model.DeptLocFkAssoc.DepartmentsEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeesEntityObject"
+    Association="model.DeptMgrFkAssoc"
+    AssociationEnd="model.DeptMgrFkAssoc.EmployeesEntityObject"
+    AssociationOtherEnd="model.DeptMgrFkAssoc.DepartmentsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeesEntityObject1"
+    Association="model.EmpDeptFkAssoc"
+    AssociationEnd="model.EmpDeptFkAssoc.EmployeesEntityObject1"
+    AssociationOtherEnd="model.EmpDeptFkAssoc.DepartmentsEO1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="DeptIdPk"
     PrimaryKey="true">

@@ -6,6 +6,7 @@ import java.sql.Timestamp;
 
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
+import oracle.jbo.RowIterator;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.SequenceImpl;
@@ -33,7 +34,9 @@ public class EmployeesEOImpl extends EntityImpl {
         ManagerId,
         DepartmentId,
         JobsEO,
-        DepartmentsEO;
+        DepartmentsEO,
+        EmployeesEntityObject,
+        EmployeesEntityObject1;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -56,6 +59,8 @@ public class EmployeesEOImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int EMPLOYEEID = AttributesEnum.EmployeeId.index();
     public static final int FIRSTNAME = AttributesEnum.FirstName.index();
     public static final int LASTNAME = AttributesEnum.LastName.index();
@@ -69,12 +74,22 @@ public class EmployeesEOImpl extends EntityImpl {
     public static final int DEPARTMENTID = AttributesEnum.DepartmentId.index();
     public static final int JOBSEO = AttributesEnum.JobsEO.index();
     public static final int DEPARTMENTSEO = AttributesEnum.DepartmentsEO.index();
+    public static final int EMPLOYEESENTITYOBJECT = AttributesEnum.EmployeesEntityObject.index();
+    public static final int EMPLOYEESENTITYOBJECT1 = AttributesEnum.EmployeesEntityObject1.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public EmployeesEOImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.EmployeesEO");
+    }
+
 
     /**
      * Gets the attribute value for EmployeeId, using the alias name EmployeeId.
@@ -252,6 +267,7 @@ public class EmployeesEOImpl extends EntityImpl {
         setAttributeInternal(DEPARTMENTID, value);
     }
 
+
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
@@ -280,6 +296,28 @@ public class EmployeesEOImpl extends EntityImpl {
         setAttributeInternal(DEPARTMENTSEO, value);
     }
 
+
+    /**
+     * @return the associated entity oracle.jbo.server.EntityImpl.
+     */
+    public EntityImpl getEmployeesEntityObject() {
+        return (EntityImpl) getAttributeInternal(EMPLOYEESENTITYOBJECT);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
+     */
+    public void setEmployeesEntityObject(EntityImpl value) {
+        setAttributeInternal(EMPLOYEESENTITYOBJECT, value);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getEmployeesEntityObject1() {
+        return (RowIterator) getAttributeInternal(EMPLOYEESENTITYOBJECT1);
+    }
+
     /**
      * @param employeeId key constituent
 
@@ -287,13 +325,6 @@ public class EmployeesEOImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(Integer employeeId) {
         return new Key(new Object[] { employeeId });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.EmployeesEO");
     }
 
     /**

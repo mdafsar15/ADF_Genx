@@ -26,6 +26,15 @@
   <ViewUsage
     Name="EmployeesView2"
     ViewObjectName="model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesVO1"
+    ViewObjectName="model.EmployeesVO"/>
+  <ViewUsage
+    Name="EmployeesRVO1"
+    ViewObjectName="model.EmployeesRVO"/>
+  <ViewUsage
+    Name="EmployeesViewObject1"
+    ViewObjectName="model.EmployeesViewObject"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"

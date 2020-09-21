@@ -3,18 +3,13 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="EmployeesEO"
+  Name="EmployeesEntityObject"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="EMPLOYEES"
-  AliasName="EmployeesEO"
-  BindingStyle="OracleName"
-  RowClass="model.EmployeesEOImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
-    <Attr Name="_isCodegen" Value="true"/>
-  </DesignTime>
+  AliasName="EmployeesEntityObject"
+  BindingStyle="OracleName">
   <Attribute
     Name="EmployeeId"
     IsNotNull="true"
@@ -134,34 +129,67 @@
     Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="EMPLOYEES"/>
-  <AccessorAttribute
-    Name="JobsEO"
-    Association="model.EmpJobFkAssoc"
-    AssociationEnd="model.EmpJobFkAssoc.JobsEO"
-    AssociationOtherEnd="model.EmpJobFkAssoc.EmployeesEO"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="DepartmentsEO"
-    Association="model.EmpDeptAssoc"
-    AssociationEnd="model.EmpDeptAssoc.DepartmentsEO"
-    AssociationOtherEnd="model.EmpDeptAssoc.EmployeesEO"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
+  <Attribute
+    Name="Bonus"
+    ColumnName="BONUS"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="EMPLOYEES">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="EmployeesEntityObjectRow"/>
+  </Attribute>
   <AccessorAttribute
     Name="EmployeesEntityObject"
-    Association="model.EmpManagerFkAssoc1"
-    AssociationEnd="model.EmpManagerFkAssoc1.EmployeesEntityObject"
-    AssociationOtherEnd="model.EmpManagerFkAssoc1.EmployeesEO"
+    Association="model.EmpManagerFkAssoc"
+    AssociationEnd="model.EmpManagerFkAssoc.EmployeesEntityObject"
+    AssociationOtherEnd="model.EmpManagerFkAssoc.ManagerIdEmployeesEntityObject"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ManagerIdEmployeesEntityObject"
+    Association="model.EmpManagerFkAssoc"
+    AssociationEnd="model.EmpManagerFkAssoc.ManagerIdEmployeesEntityObject"
+    AssociationOtherEnd="model.EmpManagerFkAssoc.EmployeesEntityObject"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="EmployeesEntityObject1"
-    Association="model.EmpManagerFkAssoc2"
-    AssociationEnd="model.EmpManagerFkAssoc2.EmployeesEntityObject1"
-    AssociationOtherEnd="model.EmpManagerFkAssoc2.EmployeesEO1"
+    Name="EmployeesEO"
+    Association="model.EmpManagerFkAssoc1"
+    AssociationEnd="model.EmpManagerFkAssoc1.EmployeesEO"
+    AssociationOtherEnd="model.EmpManagerFkAssoc1.EmployeesEntityObject"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="DepartmentsEO"
+    Association="model.DeptMgrFkAssoc"
+    AssociationEnd="model.DeptMgrFkAssoc.DepartmentsEO"
+    AssociationOtherEnd="model.DeptMgrFkAssoc.EmployeesEntityObject"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="JobsEO"
+    Association="model.EmpJobFkAssoc1"
+    AssociationEnd="model.EmpJobFkAssoc1.JobsEO"
+    AssociationOtherEnd="model.EmpJobFkAssoc1.EmployeesEntityObject"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="DepartmentsEO1"
+    Association="model.EmpDeptFkAssoc"
+    AssociationEnd="model.EmpDeptFkAssoc.DepartmentsEO1"
+    AssociationOtherEnd="model.EmpDeptFkAssoc.EmployeesEntityObject1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeesEO1"
+    Association="model.EmpManagerFkAssoc2"
+    AssociationEnd="model.EmpManagerFkAssoc2.EmployeesEO1"
+    AssociationOtherEnd="model.EmpManagerFkAssoc2.EmployeesEntityObject1"
+    Type="model.EmployeesEOImpl"
+    IsUpdateable="true"/>
   <Key
     Name="EmpEmailUk">
     <DesignTime>
@@ -169,7 +197,7 @@
       <Attr Name="_DBObjectName" Value="EMP_EMAIL_UK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.Email"/>
+      <Item Value="model.EmployeesEntityObject.Email"/>
     </AttrArray>
   </Key>
   <Key
@@ -179,7 +207,7 @@
       <Attr Name="_DBObjectName" Value="EMP_EMP_ID_PK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.EmployeeId"/>
+      <Item Value="model.EmployeesEntityObject.EmployeeId"/>
     </AttrArray>
   </Key>
   <Key
@@ -190,7 +218,7 @@
       <Attr Name="_DBObjectName" Value="EMP_DEPT_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.DepartmentId"/>
+      <Item Value="model.EmployeesEntityObject.DepartmentId"/>
     </AttrArray>
   </Key>
   <Key
@@ -201,7 +229,7 @@
       <Attr Name="_DBObjectName" Value="EMP_JOB_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.JobId"/>
+      <Item Value="model.EmployeesEntityObject.JobId"/>
     </AttrArray>
   </Key>
   <Key
@@ -212,7 +240,7 @@
       <Attr Name="_DBObjectName" Value="EMP_MANAGER_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.ManagerId"/>
+      <Item Value="model.EmployeesEntityObject.ManagerId"/>
     </AttrArray>
   </Key>
 </Entity>

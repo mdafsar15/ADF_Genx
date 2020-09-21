@@ -2,41 +2,52 @@ package view.backing;
 
 import javax.faces.event.ActionEvent;
 
+import oracle.adf.view.rich.component.rich.input.RichInputText;
+
 public class MyClass {
     public MyClass() {
     }
     
-    private int x;
-    private int y;
-    private int z;
+//    private int x;
+//    private int y;
+//    private int z;
+    
+    
+    private RichInputText it1;
+    private RichInputText it2;
+    private RichInputText it3;
     
     public void addTwoNumbers(ActionEvent actionEvent) {
-        // Add event code here...
-        this.setZ(this.getX() + this.getY());
         
+//        this.setZ(this.getX() + this.getY());
+        int a = Integer.parseInt(this.getIt1().getValue().toString());
+        int b = Integer.parseInt(this.getIt2().getValue().toString());
+        this.getIt3().setValue(a+b  );
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setIt1(RichInputText it1) {
+        this.it1 = it1;
     }
 
-    public int getX() {
-        return x;
+    public RichInputText getIt1() {
+        return it1;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setIt2(RichInputText it2) {
+        this.it2 = it2;
     }
 
-    public int getY() {
-        return y;
+    public RichInputText getIt2() {
+        return it2;
     }
 
-    public void setZ(int z) {
-        this.z = z;
+    public void setIt3(RichInputText it3) {
+        this.it3 = it3;
     }
 
-    public int getZ() {
-        return z;
+    public RichInputText getIt3() {
+        return it3;
     }
+
+
 }

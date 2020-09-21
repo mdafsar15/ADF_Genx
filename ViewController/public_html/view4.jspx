@@ -3,14 +3,14 @@
           xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <f:view>
-        <af:document title="view3.jspx" id="d1">
+        <af:document title="view4.jspx" id="d1">
             <af:form id="f1">
                 <af:panelBox text="PanelBox1" id="pb1">
                     <f:facet name="toolbar"/>
-                    <af:inputText label="Label 1" id="it1" binding="#{backingBeanScope.MyBean.it1}"/>
-                    <af:inputText label="Label 2" id="it2" binding="#{backingBeanScope.MyBean.it2}"/>
-                    <af:inputText label="Label 3" id="it3" binding="#{backingBeanScope.MyBean.it3}"/>
-                    <af:button text="Add" id="b1" actionListener="#{backingBeanScope.MyBean.addTwoNumbers}"/>
+                    <af:inputText label="X" id="it1" value="#{backingBeanScope.GenxBeanNew.x}"/>
+                    <af:inputText label="Y" id="it2" value="#{backingBeanScope.GenxBeanNew.y}"/>
+                    <af:inputText label="Output" id="it3" value="#{backingBeanScope.GenxBeanNew.z}"/>
+                    <af:button text="Add" id="b1" actionListener="#{backingBeanScope.GenxBeanNew.addTwoNum}"/>
                 </af:panelBox>
             </af:form>
         </af:document>

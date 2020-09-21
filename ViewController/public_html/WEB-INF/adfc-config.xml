@@ -33,6 +33,9 @@
   <view id="view3">
     <page>/view3.jspx</page>
   </view>
+  <view id="view4">
+    <page>/view4.jspx</page>
+  </view>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
@@ -75,6 +78,16 @@
   <managed-bean id="__1">
     <managed-bean-name>MyBean</managed-bean-name>
     <managed-bean-class>view.backing.MyClass</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>GenxBean</managed-bean-name>
+    <managed-bean-class>view.genx.GenxClass</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>GenxBeanNew</managed-bean-name>
+    <managed-bean-class>view.genx.GenxClassNew</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
   </managed-bean>
 </adfc-config>

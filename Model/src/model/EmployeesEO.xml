@@ -148,6 +148,20 @@
     AssociationOtherEnd="model.EmpDeptAssoc.EmployeesEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeesEntityObject"
+    Association="model.EmpManagerFkAssoc1"
+    AssociationEnd="model.EmpManagerFkAssoc1.EmployeesEntityObject"
+    AssociationOtherEnd="model.EmpManagerFkAssoc1.EmployeesEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeesEntityObject1"
+    Association="model.EmpManagerFkAssoc2"
+    AssociationEnd="model.EmpManagerFkAssoc2.EmployeesEntityObject1"
+    AssociationOtherEnd="model.EmpManagerFkAssoc2.EmployeesEO1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="EmpEmailUk">
     <DesignTime>

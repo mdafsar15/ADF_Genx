@@ -17,6 +17,7 @@
     <page path="PageFlow#applyFndByDeptIdVC" usageId="view_adfc_config___applyFndByDeptIdVCPageDef"/>
     <page path="/popup.jspx" usageId="view_popupPageDef"/>
     <page path="/popup1.jspx" usageId="view_popup1PageDef"/>
+    <page path="/page6.jspx" usageId="view_page6PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -35,6 +36,7 @@
           path="view.pageDefs.adfc_config___applyFndByDeptIdVCPageDef"/>
     <page id="view_popupPageDef" path="view.pageDefs.popupPageDef"/>
     <page id="view_popup1PageDef" path="view.pageDefs.popup1PageDef"/>
+    <page id="view_page6PageDef" path="view.pageDefs.page6PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

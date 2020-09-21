@@ -62,6 +62,13 @@
     AssociationOtherEnd="model.EmpJobFkAssoc.JobsEO"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EmployeesEntityObject"
+    Association="model.EmpJobFkAssoc1"
+    AssociationEnd="model.EmpJobFkAssoc1.EmployeesEntityObject"
+    AssociationOtherEnd="model.EmpJobFkAssoc1.JobsEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="JobIdPk"
     PrimaryKey="true">

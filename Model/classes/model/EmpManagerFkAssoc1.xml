@@ -3,21 +3,21 @@
 <!---->
 <Association
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="EmpManagerFkAssoc"
+  Name="EmpManagerFkAssoc1"
   Version="12.2.1.9.14"
   InheritPersonalization="merge">
   <DesignTime>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <AssociationEnd
-    Name="ManagerIdEmployeesEntityObject"
+    Name="EmployeesEntityObject"
     Cardinality="1"
     Source="true"
     Owner="model.EmployeesEntityObject">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="ManagerIdEmployeesEntityObject"/>
+      <Attr Name="_finderName" Value="EmployeesEntityObject"/>
       <Attr Name="_foreignKey" Value="model.EmployeesEntityObject.EmpEmpIdPk"/>
     </DesignTime>
     <AttrArray Name="Attributes">
@@ -25,17 +25,17 @@
     </AttrArray>
   </AssociationEnd>
   <AssociationEnd
-    Name="EmployeesEntityObject"
+    Name="EmployeesEO"
     Cardinality="-1"
-    Owner="model.EmployeesEntityObject">
+    Owner="model.EmployeesEO">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="EmployeesEntityObject"/>
-      <Attr Name="_foreignKey" Value="model.EmployeesEntityObject.EmpManagerFk"/>
+      <Attr Name="_finderName" Value="EmployeesEO"/>
+      <Attr Name="_foreignKey" Value="model.EmployeesEO.EmpManagerFk"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEntityObject.ManagerId"/>
+      <Item Value="model.EmployeesEO.ManagerId"/>
     </AttrArray>
   </AssociationEnd>
 </Association>
