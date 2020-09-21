@@ -15,5 +15,7 @@ public interface AppModule extends ApplicationModule {
     void applyFndByDeptIdVC(int d);
 
     void createRow();
+
+    void removeCurrentRow();
 }
 

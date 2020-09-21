@@ -88,6 +88,13 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         vo.insertRow(newRow);
         getDBTransaction().commit();
     }
+    
+    public void removeCurrentRow(){
+        ViewObjectImpl vo = getCountryNewEOView1();
+        Row newRow = vo.createRow();
+        newRow.remove();
+        getDBTransaction().commit();
+    }
 
 
 
