@@ -69,6 +69,24 @@
   <EntityUsage
     Name="EmployeeBindingEO"
     Entity="model.EmployeeBindingEO"/>
+  <EntityUsage
+    Name="JobsEO"
+    Entity="model.JobsEO"
+    Association="model.EmpJobFkAssoc2"
+    AssociationEnd="model.EmpJobFkAssoc2.JobsEO"
+    SourceUsage="model.EmployeeBindingVO.EmployeeBindingEO"
+    Reference="true"
+    JoinType="INNER JOIN"
+    DeleteParticipant="false">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.JobsEO.JobId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.EmployeeBindingEO.JobId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="EmployeeId"
     IsNotNull="true"
@@ -157,6 +175,20 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="JobId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="JobId"
+    EntityUsage="JobsEO"
+    AliasName="JOB_ID1"/>
+  <ViewAttribute
+    Name="JobTitle"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="JobTitle"
+    EntityUsage="JobsEO"
+    AliasName="JOB_TITLE"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
