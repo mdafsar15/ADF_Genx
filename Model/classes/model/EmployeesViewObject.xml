@@ -19,15 +19,32 @@
         ResId="model.EmployeesViewObject_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <ViewAccessor
+    Name="AppModule_JobsView1_1"
+    ViewObjectName="model.JobsView"
+    AMUsageName="AppModule"
+    ViewInstanceName="JobsView1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_JobId"
+    ListVOName="AppModule_JobsView1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="JobId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="JobId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="JobTitle"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="EmployeesEntityObject"
     Entity="model.EmployeesEntityObject"/>
-  <ViewAttribute
-    Name="Bonus"
-    PrecisionRule="true"
-    EntityAttrName="Bonus"
-    EntityUsage="EmployeesEntityObject"
-    AliasName="BONUS"/>
   <ViewAttribute
     Name="CommissionPct"
     PrecisionRule="true"
@@ -74,7 +91,15 @@
     PrecisionRule="true"
     EntityAttrName="JobId"
     EntityUsage="EmployeesEntityObject"
-    AliasName="JOB_ID"/>
+    AliasName="JOB_ID"
+    LOVName="LOV_JobId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LastName"
     IsNotNull="true"

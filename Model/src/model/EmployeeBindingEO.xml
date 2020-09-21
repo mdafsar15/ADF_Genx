@@ -3,14 +3,14 @@
 <!---->
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="EmployeesEO"
+  Name="EmployeeBindingEO"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="EMPLOYEES"
-  AliasName="EmployeesEO"
+  AliasName="EmployeeBindingEO"
   BindingStyle="OracleName"
-  RowClass="model.EmployeesEOImpl">
+  RowClass="model.EmployeeBindingEOImpl">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -135,47 +135,68 @@
     ColumnType="NUMBER"
     TableName="EMPLOYEES"/>
   <AccessorAttribute
-    Name="JobsEO"
-    Association="model.EmpJobFkAssoc"
-    AssociationEnd="model.EmpJobFkAssoc.JobsEO"
-    AssociationOtherEnd="model.EmpJobFkAssoc.EmployeesEO"
+    Name="EmployeesEntityObject"
+    Association="model.EmpManagerFkAssoc3"
+    AssociationEnd="model.EmpManagerFkAssoc3.EmployeesEntityObject"
+    AssociationOtherEnd="model.EmpManagerFkAssoc3.EmployeeBindingEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ManagerIdEmployeeBindingEO"
+    Association="model.EmpManagerFkAssoc4"
+    AssociationEnd="model.EmpManagerFkAssoc4.ManagerIdEmployeeBindingEO"
+    AssociationOtherEnd="model.EmpManagerFkAssoc4.EmployeeBindingEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeeBindingEO"
+    Association="model.EmpManagerFkAssoc4"
+    AssociationEnd="model.EmpManagerFkAssoc4.EmployeeBindingEO"
+    AssociationOtherEnd="model.EmpManagerFkAssoc4.ManagerIdEmployeeBindingEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EmployeesEO"
+    Association="model.EmpManagerFkAssoc5"
+    AssociationEnd="model.EmpManagerFkAssoc5.EmployeesEO"
+    AssociationOtherEnd="model.EmpManagerFkAssoc5.EmployeeBindingEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <AccessorAttribute
     Name="DepartmentsEO"
-    Association="model.EmpDeptAssoc"
-    AssociationEnd="model.EmpDeptAssoc.DepartmentsEO"
-    AssociationOtherEnd="model.EmpDeptAssoc.EmployeesEO"
+    Association="model.DeptMgrFkAssoc1"
+    AssociationEnd="model.DeptMgrFkAssoc1.DepartmentsEO"
+    AssociationOtherEnd="model.DeptMgrFkAssoc1.EmployeeBindingEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="JobsEO"
+    Association="model.EmpJobFkAssoc2"
+    AssociationEnd="model.EmpJobFkAssoc2.JobsEO"
+    AssociationOtherEnd="model.EmpJobFkAssoc2.EmployeeBindingEO"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="EmployeesEntityObject"
-    Association="model.EmpManagerFkAssoc1"
-    AssociationEnd="model.EmpManagerFkAssoc1.EmployeesEntityObject"
-    AssociationOtherEnd="model.EmpManagerFkAssoc1.EmployeesEO"
+    Name="DepartmentsEO1"
+    Association="model.EmpDeptFkAssoc1"
+    AssociationEnd="model.EmpDeptFkAssoc1.DepartmentsEO1"
+    AssociationOtherEnd="model.EmpDeptFkAssoc1.EmployeeBindingEO1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
     Name="EmployeesEntityObject1"
-    Association="model.EmpManagerFkAssoc2"
-    AssociationEnd="model.EmpManagerFkAssoc2.EmployeesEntityObject1"
-    AssociationOtherEnd="model.EmpManagerFkAssoc2.EmployeesEO1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="EmployeeBindingEO"
-    Association="model.EmpManagerFkAssoc5"
-    AssociationEnd="model.EmpManagerFkAssoc5.EmployeeBindingEO"
-    AssociationOtherEnd="model.EmpManagerFkAssoc5.EmployeesEO"
+    Association="model.EmpManagerFkAssoc6"
+    AssociationEnd="model.EmpManagerFkAssoc6.EmployeesEntityObject1"
+    AssociationOtherEnd="model.EmpManagerFkAssoc6.EmployeeBindingEO1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="EmployeeBindingEO1"
+    Name="EmployeesEO1"
     Association="model.EmpManagerFkAssoc7"
-    AssociationEnd="model.EmpManagerFkAssoc7.EmployeeBindingEO1"
-    AssociationOtherEnd="model.EmpManagerFkAssoc7.EmployeesEO1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+    AssociationEnd="model.EmpManagerFkAssoc7.EmployeesEO1"
+    AssociationOtherEnd="model.EmpManagerFkAssoc7.EmployeeBindingEO1"
+    Type="model.EmployeesEOImpl"
+    IsUpdateable="true"/>
   <Key
     Name="EmpEmailUk">
     <DesignTime>
@@ -183,7 +204,7 @@
       <Attr Name="_DBObjectName" Value="EMP_EMAIL_UK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.Email"/>
+      <Item Value="model.EmployeeBindingEO.Email"/>
     </AttrArray>
   </Key>
   <Key
@@ -193,7 +214,7 @@
       <Attr Name="_DBObjectName" Value="EMP_EMP_ID_PK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.EmployeeId"/>
+      <Item Value="model.EmployeeBindingEO.EmployeeId"/>
     </AttrArray>
   </Key>
   <Key
@@ -204,7 +225,7 @@
       <Attr Name="_DBObjectName" Value="EMP_DEPT_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.DepartmentId"/>
+      <Item Value="model.EmployeeBindingEO.DepartmentId"/>
     </AttrArray>
   </Key>
   <Key
@@ -215,7 +236,7 @@
       <Attr Name="_DBObjectName" Value="EMP_JOB_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.JobId"/>
+      <Item Value="model.EmployeeBindingEO.JobId"/>
     </AttrArray>
   </Key>
   <Key
@@ -226,7 +247,7 @@
       <Attr Name="_DBObjectName" Value="EMP_MANAGER_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EmployeesEO.ManagerId"/>
+      <Item Value="model.EmployeeBindingEO.ManagerId"/>
     </AttrArray>
   </Key>
 </Entity>

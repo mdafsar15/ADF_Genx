@@ -80,6 +80,20 @@
     AssociationOtherEnd="model.EmpDeptFkAssoc.DepartmentsEO1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EmployeeBindingEO"
+    Association="model.DeptMgrFkAssoc1"
+    AssociationEnd="model.DeptMgrFkAssoc1.EmployeeBindingEO"
+    AssociationOtherEnd="model.DeptMgrFkAssoc1.DepartmentsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeeBindingEO1"
+    Association="model.EmpDeptFkAssoc1"
+    AssociationEnd="model.EmpDeptFkAssoc1.EmployeeBindingEO1"
+    AssociationOtherEnd="model.EmpDeptFkAssoc1.DepartmentsEO1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="DeptIdPk"
     PrimaryKey="true">

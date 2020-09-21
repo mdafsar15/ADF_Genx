@@ -118,28 +118,21 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewLinkImpl) findViewLink("DeptEmpVL1");
     }
 
+
     /**
-     * Container's getter for EmployeesVO1.
-     * @return EmployeesVO1
+     * Container's getter for JobsView1.
+     * @return JobsView1
      */
-    public ViewObjectImpl getEmployeesVO1() {
-        return (ViewObjectImpl) findViewObject("EmployeesVO1");
+    public ViewObjectImpl getJobsView1() {
+        return (ViewObjectImpl) findViewObject("JobsView1");
     }
 
     /**
-     * Container's getter for EmployeesRVO1.
-     * @return EmployeesRVO1
+     * Container's getter for EmployeeBindingVO1.
+     * @return EmployeeBindingVO1
      */
-    public ViewObjectImpl getEmployeesRVO1() {
-        return (ViewObjectImpl) findViewObject("EmployeesRVO1");
-    }
-
-    /**
-     * Container's getter for EmployeesViewObject1.
-     * @return EmployeesViewObject1
-     */
-    public ViewObjectImpl getEmployeesViewObject1() {
-        return (ViewObjectImpl) findViewObject("EmployeesViewObject1");
+    public ViewObjectImpl getEmployeeBindingVO1() {
+        return (ViewObjectImpl) findViewObject("EmployeeBindingVO1");
     }
 }
 
