@@ -77,6 +77,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <validation:LengthValidationBean
+      Name="PhoneNumberRule0"
+      ResId="model.EmployeeValidateEO.PhoneNumber_Rule_0"
+      OnAttribute="PhoneNumber"
+      CompareType="EQUALTO"
+      DataType="CHARACTER"
+      CompareLength="10"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="HireDate"
