@@ -2,6 +2,8 @@ package model;
 
 import java.math.BigDecimal;
 
+import java.math.BigInteger;
+
 import model.common.CountryNewViewRow;
 
 import oracle.jbo.server.ViewRowImpl;
@@ -12,6 +14,7 @@ import oracle.jbo.server.ViewRowImpl;
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
 public class CountryNewViewRowImpl extends ViewRowImpl implements CountryNewViewRow {
+
 
     public static final int ENTITY_COUNTRYNEWEO = 0;
 
@@ -45,6 +48,7 @@ public class CountryNewViewRowImpl extends ViewRowImpl implements CountryNewView
             return vals;
         }
     }
+
 
     public static final int COUNTRYID = AttributesEnum.CountryId.index();
     public static final int COUNTRYNAME = AttributesEnum.CountryName.index();
@@ -111,5 +115,7 @@ public class CountryNewViewRowImpl extends ViewRowImpl implements CountryNewView
     public void setRegionId(BigDecimal value) {
         setAttributeInternal(REGIONID, value);
     }
+
+
 }
 

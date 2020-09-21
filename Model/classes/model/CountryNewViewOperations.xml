@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding='windows-1252'?>
 <!DOCTYPE OperationDefinitions SYSTEM "jbo_03_01.dtd">
-<OperationDefinitions xmlns="http://xmlns.oracle.com/bc4j" Name="JobsViewOperations">
+<OperationDefinitions xmlns="http://xmlns.oracle.com/bc4j" Name="CountryNewViewOperations">
   <ExpressionCodeSource
-    Name="JobsViewRow"
+    Name="CountryNewViewRow"
     Type="Static"
-    URI="model/JobsViewRow.bcs"/>
+    URI="model/CountryNewViewRow.bcs"/>
 </OperationDefinitions>

@@ -27,9 +27,6 @@
     Name="EmployeesView2"
     ViewObjectName="model.EmployeesView"/>
   <ViewUsage
-    Name="JobsView1"
-    ViewObjectName="model.JobsView"/>
-  <ViewUsage
     Name="EmployeeBindingVO1"
     ViewObjectName="model.EmployeeBindingVO"/>
   <ViewUsage
@@ -47,6 +44,12 @@
   <ViewUsage
     Name="CountryNewView1"
     ViewObjectName="model.CountryNewView"/>
+  <ViewUsage
+    Name="JobsView1"
+    ViewObjectName="model.JobsView"/>
+  <ViewUsage
+    Name="EmployeeValidateView1"
+    ViewObjectName="model.EmployeeValidateView"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"

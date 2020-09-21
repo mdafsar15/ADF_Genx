@@ -105,6 +105,10 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                 }
                 iter.closeRowSetIterator();
     }
+    
+//    public int getNumber(){
+//        return 11;
+//    }
 
 
     /**
@@ -148,14 +152,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewLinkImpl) findViewLink("DeptEmpVL1");
     }
 
-
-    /**
-     * Container's getter for JobsView1.
-     * @return JobsView1
-     */
-    public ViewObjectImpl getJobsView1() {
-        return (ViewObjectImpl) findViewObject("JobsView1");
-    }
 
     /**
      * Container's getter for EmployeeBindingVO1.
@@ -219,6 +215,22 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public CountryNewViewImpl getCountryNewView1() {
         return (CountryNewViewImpl) findViewObject("CountryNewView1");
+    }
+
+    /**
+     * Container's getter for JobsView1.
+     * @return JobsView1
+     */
+    public ViewObjectImpl getJobsView1() {
+        return (ViewObjectImpl) findViewObject("JobsView1");
+    }
+
+    /**
+     * Container's getter for EmployeeValidateView1.
+     * @return EmployeeValidateView1
+     */
+    public ViewObjectImpl getEmployeeValidateView1() {
+        return (ViewObjectImpl) findViewObject("EmployeeValidateView1");
     }
 }
 

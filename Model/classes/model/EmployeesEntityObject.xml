@@ -204,6 +204,20 @@
     AssociationOtherEnd="model.EmpManagerFkAssoc6.EmployeesEntityObject1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EmployeeValidateEO"
+    Association="model.EmpManagerFkAssoc8"
+    AssociationEnd="model.EmpManagerFkAssoc8.EmployeeValidateEO"
+    AssociationOtherEnd="model.EmpManagerFkAssoc8.EmployeesEntityObject"
+    Type="model.EmployeeValidateEOImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeeValidateEO1"
+    Association="model.EmpManagerFkAssoc12"
+    AssociationEnd="model.EmpManagerFkAssoc12.EmployeeValidateEO1"
+    AssociationOtherEnd="model.EmpManagerFkAssoc12.EmployeesEntityObject1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="EmpEmailUk">
     <DesignTime>

@@ -2,6 +2,8 @@ package model;
 
 import java.math.BigDecimal;
 
+import java.math.BigInteger;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
@@ -25,6 +27,7 @@ public class CountryNewEOImpl extends EntityImpl {
         LocationEO,
         RegionsEO;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -115,6 +118,7 @@ public class CountryNewEOImpl extends EntityImpl {
     public void setRegionId(BigDecimal value) {
         setAttributeInternal(REGIONID, value);
     }
+
 
     /**
      * @return the associated entity oracle.jbo.RowIterator.

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmpManagerFkAssoc9"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="ManagerIdEmployeeValidateEO"
+    Cardinality="1"
+    Source="true"
+    Owner="model.EmployeeValidateEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="ManagerIdEmployeeValidateEO"/>
+      <Attr Name="_foreignKey" Value="model.EmployeeValidateEO.EmpEmpIdPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmployeeValidateEO.EmployeeId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="EmployeeValidateEO"
+    Cardinality="-1"
+    Owner="model.EmployeeValidateEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="EmployeeValidateEO"/>
+      <Attr Name="_foreignKey" Value="model.EmployeeValidateEO.EmpManagerFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmployeeValidateEO.ManagerId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

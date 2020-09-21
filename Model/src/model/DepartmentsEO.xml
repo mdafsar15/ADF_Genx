@@ -94,6 +94,20 @@
     AssociationOtherEnd="model.EmpDeptFkAssoc1.DepartmentsEO1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EmployeeValidateEO"
+    Association="model.DeptMgrFkAssoc2"
+    AssociationEnd="model.DeptMgrFkAssoc2.EmployeeValidateEO"
+    AssociationOtherEnd="model.DeptMgrFkAssoc2.DepartmentsEO"
+    Type="model.EmployeeValidateEOImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeeValidateEO1"
+    Association="model.EmpDeptFkAssoc2"
+    AssociationEnd="model.EmpDeptFkAssoc2.EmployeeValidateEO1"
+    AssociationOtherEnd="model.EmpDeptFkAssoc2.DepartmentsEO1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="DeptIdPk"
     PrimaryKey="true">

@@ -1,0 +1,12 @@
+//Groovy Scripts for model.CountryNewView
+
+package model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="someNumber")
+def someNumber_ExpressionScript_Expression()
+{
+adf.object.applicationModule.getNumber()
+}
+

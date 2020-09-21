@@ -83,21 +83,6 @@
     EntityAttrName="MinSalary"
     EntityUsage="JobsEO"
     AliasName="MIN_SALARY"/>
-  <ViewAttribute
-    Name="SumOfSalary"
-    IsUpdateable="false"
-    IsSelected="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="VIEW_ATTR"
-    SQLType="NUMERIC">
-    <TransientExpression
-      Name="ExpressionScript"
-      trustMode="untrusted"
-      CodeSourceName="JobsViewRow"/>
-  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
