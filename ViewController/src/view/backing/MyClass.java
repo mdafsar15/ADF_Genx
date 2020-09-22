@@ -1,5 +1,7 @@
 package view.backing;
 
+import java.util.Map;
+
 import javax.faces.event.ActionEvent;
 
 
@@ -12,6 +14,12 @@ import oracle.binding.OperationBinding;
 public class MyClass {
     public MyClass() {
     }
+    
+    public BindingContainer getContainer(){
+        return BindingContext.getCurrent().getCurrentBindingsEntry();
+    }
+    
+    private int x;
     
 //    private int x;
 //    private int y;
@@ -68,5 +76,25 @@ public class MyClass {
         BindingContainer bc =bctx.getCurrentBindingsEntry();
         OperationBinding ob = bc.getOperationBinding("Commit");
         ob.execute();
+    }
+
+    public void getEmployeeList(ActionEvent actionEvent) {
+       BindingContainer bc = this.getContainer();
+        OperationBinding ob = bc.getOperationBinding("applyFndByDeptIdVC");
+        Map m = ob.getParamsMap();
+        m.put("d",x);
+        ob.execute();
+        
+       
+    
+    }
+
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getX() {
+        return x;
     }
 }

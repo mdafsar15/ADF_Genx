@@ -9,8 +9,8 @@
                 <af:panelBox text="PanelBox1" id="pb1">
                     <f:facet name="toolbar"/>
                     <af:panelGroupLayout id="pgl1">
-                        <af:inputText label="Label 1" id="it1"/>
-                        <af:button text="Search" id="b1"/>
+                        <af:inputText label="Label 1" id="it1" value="#{backingBeanScope.MyBean.x}"/>
+                        <af:button text="Search" id="b1" actionListener="#{backingBeanScope.MyBean.getEmployeeList}"/>
                     </af:panelGroupLayout>
                     <af:table value="#{bindings.EmployeeBindingVO1.collectionModel}" var="row"
                               rows="#{bindings.EmployeeBindingVO1.rangeSize}"
