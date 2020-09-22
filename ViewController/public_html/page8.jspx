@@ -98,7 +98,7 @@
                     <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                                disabled="#{!bindings.Commit.enabled}" id="b2"/>
                     <af:button text="New" id="b3" actionListener="#{backingBeanScope.MyBean.createEmployee}"/>
-                    <af:button text="commit" id="b4"/>
+                    <af:button text="commit" id="b4" actionListener="#{backingBeanScope.MyBean.saveEmployee}"/>
                 </af:panelBox>
             </af:form>
         </af:document>

@@ -62,4 +62,11 @@ public class MyClass {
         OperationBinding ob = bc.getOperationBinding("CreateInsert");
         ob.execute();
     }
+
+    public void saveEmployee(ActionEvent actionEvent) {
+        BindingContext bctx = BindingContext.getCurrent();
+        BindingContainer bc =bctx.getCurrentBindingsEntry();
+        OperationBinding ob = bc.getOperationBinding("Commit");
+        ob.execute();
+    }
 }
