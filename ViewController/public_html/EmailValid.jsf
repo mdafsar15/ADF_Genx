@@ -28,7 +28,8 @@
                               shortDesc="#{bindings.Email.hints.tooltip}" id="it3" validator="#{Index.emailValidator}">
                     <f:validator binding="#{bindings.Email.validator}"/>
                     <af:validateRegExp pattern="^[_A-Za-z0-9-]+(\\\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$"
-                                       messageDetailNoMatch="You Have Entered Wrong EmailId. Please Try Again"/>
+                                       messageDetailNoMatch="You Have Entered Wrong EmailId. Please Try Again"
+                                       hint="test@gmail.com"/>
                 </af:inputText>
                 <af:inputText value="#{bindings.EmployeeId.inputValue}" label="#{bindings.EmployeeId.hints.label}"
                               required="#{bindings.EmployeeId.hints.mandatory}"
