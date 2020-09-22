@@ -90,4 +90,9 @@
     <managed-bean-class>view.genx.GenxClassNew</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>Index</managed-bean-name>
+    <managed-bean-class>view.validate.Validate</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

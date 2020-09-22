@@ -25,7 +25,7 @@
                               required="#{bindings.Email.hints.mandatory}"
                               columns="#{bindings.Email.hints.displayWidth}"
                               maximumLength="#{bindings.Email.hints.precision}"
-                              shortDesc="#{bindings.Email.hints.tooltip}" id="it3">
+                              shortDesc="#{bindings.Email.hints.tooltip}" id="it3" validator="#{Index.emailValidator}">
                     <f:validator binding="#{bindings.Email.validator}"/>
                     <af:validateRegExp pattern="^[_A-Za-z0-9-]+(\\\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$"
                                        messageDetailNoMatch="You Have Entered Wrong EmailId. Please Try Again"/>
