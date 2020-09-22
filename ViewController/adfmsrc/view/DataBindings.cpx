@@ -21,6 +21,7 @@
     <page path="/page7.jspx" usageId="view_page7PageDef"/>
     <page path="/page8.jspx" usageId="view_page8PageDef"/>
     <page path="/page9.jspx" usageId="view_page9PageDef"/>
+    <page path="/EmailValid.jsf" usageId="view_EmailValidPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -43,6 +44,7 @@
     <page id="view_page7PageDef" path="view.pageDefs.page7PageDef"/>
     <page id="view_page8PageDef" path="view.pageDefs.page8PageDef"/>
     <page id="view_page9PageDef" path="view.pageDefs.page9PageDef"/>
+    <page id="view_EmailValidPageDef" path="view.pageDefs.EmailValidPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
