@@ -44,6 +44,7 @@
                               maximumLength="#{bindings.FirstName.hints.precision}"
                               shortDesc="#{bindings.FirstName.hints.tooltip}" id="it5">
                     <f:validator binding="#{bindings.FirstName.validator}"/>
+                    <f:validator/>
                 </af:inputText>
                 <af:inputDate value="#{bindings.HireDate.inputValue}" label="#{bindings.HireDate.hints.label}"
                               required="#{bindings.HireDate.hints.mandatory}"
