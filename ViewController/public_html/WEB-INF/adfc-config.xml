@@ -107,4 +107,15 @@
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1masterDetailsTable.jsf-->
   </managed-bean>
+  <managed-bean id="__18">
+    <managed-bean-name>backing_editableRunTime</managed-bean-name>
+    <managed-bean-class>view.backing.EditableRunTime</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1editableRunTime.jsf-->
+  </managed-bean>
+  <managed-bean id="__19">
+    <managed-bean-name>backing_Index</managed-bean-name>
+    <managed-bean-class>view.dynamic.BackingBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
