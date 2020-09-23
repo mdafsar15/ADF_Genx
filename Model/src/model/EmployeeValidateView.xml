@@ -19,9 +19,80 @@
         ResId="model.EmployeeValidateView_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <ViewAccessor
+    Name="AppModule_RegionsView1_1"
+    ViewObjectName="model.RegionsView"
+    AMUsageName="AppModule"
+    ViewInstanceName="RegionsView1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_CountryNewView1_1"
+    ViewObjectName="model.CountryNewView"
+    AMUsageName="AppModule"
+    ViewInstanceName="CountryNewView1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RegionId"
+    ListVOName="AppModule_RegionsView1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RegionId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RegionId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="RegionName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CountryId"
+    ListVOName="AppModule_CountryNewView1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CountryId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CountryId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="CountryName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="EmployeeValidateEO"
     Entity="model.EmployeeValidateEO"/>
+  <EntityUsage
+    Name="RegionsEO"
+    Entity="model.RegionsEO">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="CountryEO"
+    Entity="model.CountryEO"
+    Association="model.CountrRegFkAssoc"
+    AssociationEnd="model.CountrRegFkAssoc.CountryEO"
+    SourceUsage="model.EmployeeValidateView.RegionsEO"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.CountryEO.RegionId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.RegionsEO.RegionId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="CommissionPct"
     PrecisionRule="true"
@@ -94,6 +165,54 @@
     EntityAttrName="Salary"
     EntityUsage="EmployeeValidateEO"
     AliasName="SALARY"/>
+  <ViewAttribute
+    Name="RegionId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RegionId"
+    EntityUsage="RegionsEO"
+    AliasName="REGION_ID"
+    LOVName="LOV_RegionId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RegionName"
+    PrecisionRule="true"
+    EntityAttrName="RegionName"
+    EntityUsage="RegionsEO"
+    AliasName="REGION_NAME"/>
+  <ViewAttribute
+    Name="CountryId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CountryId"
+    EntityUsage="CountryEO"
+    AliasName="COUNTRY_ID"
+    LOVName="LOV_CountryId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CountryName"
+    PrecisionRule="true"
+    EntityAttrName="CountryName"
+    EntityUsage="CountryEO"
+    AliasName="COUNTRY_NAME"/>
+  <ViewAttribute
+    Name="RegionId1"
+    PrecisionRule="true"
+    EntityAttrName="RegionId"
+    EntityUsage="CountryEO"
+    AliasName="REGION_ID1"/>
   <ViewCriteria
     Name="EmployeeValidateViewCriteria"
     ViewObjectName="model.EmployeeValidateView"
@@ -117,22 +236,6 @@
           Value="InAdvancedMode"/>
       </CustomProperties>
     </Properties>
-    <ViewCriteria
-      Name="EmployeeValidateViewSubCriteria1"
-      ViewObjectName="model.EmployeeValidateView"
-      Conjunction="AND">
-      <ViewCriteriaRow
-        Name="EmployeeValidateViewSubCriteria1_row_0"
-        UpperColumns="1">
-        <ViewCriteriaItem
-          Name="Salary"
-          ViewAttribute="Salary"
-          Operator="&lt;"
-          Conjunction="AND"
-          Value="10000"
-          Required="Optional"/>
-      </ViewCriteriaRow>
-    </ViewCriteria>
   </ViewCriteria>
   <ResourceBundle>
     <PropertiesBundle

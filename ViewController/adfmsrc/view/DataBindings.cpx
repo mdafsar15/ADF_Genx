@@ -25,6 +25,8 @@
     <page path="/Template.jsf" usageId="view_TemplatePageDef"/>
     <page path="/index2.jsf" usageId="view_index2PageDef"/>
     <page path="/backingBean.jsf" usageId="view_backingBeanPageDef"/>
+    <page path="/index.jsf" usageId="view_indexPageDef"/>
+    <page path="/autoPopulate.jsf" usageId="view_autoPopulatePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -51,6 +53,8 @@
     <page id="view_TemplatePageDef" path="view.pageDefs.TemplatePageDef"/>
     <page id="view_index2PageDef" path="view.pageDefs.index2PageDef"/>
     <page id="view_backingBeanPageDef" path="view.pageDefs.backingBeanPageDef"/>
+    <page id="view_indexPageDef" path="view.pageDefs.indexPageDef"/>
+    <page id="view_autoPopulatePageDef" path="view.pageDefs.autoPopulatePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

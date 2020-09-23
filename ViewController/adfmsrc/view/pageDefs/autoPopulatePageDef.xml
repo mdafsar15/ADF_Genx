@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="indexPageDef"
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="autoPopulatePageDef"
                 Package="view.pageDefs">
   <parameters/>
   <executables>
@@ -61,6 +61,25 @@
     <attributeValues IterBinding="EmployeeValidateView1Iterator" id="Salary">
       <AttrNames>
         <Item Value="Salary"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmployeeValidateView1Iterator" StaticList="false" Uses="LOV_RegionId" id="RegionId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="EmployeeValidateView1Iterator" id="RegionName">
+      <AttrNames>
+        <Item Value="RegionName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmployeeValidateView1Iterator" StaticList="false" Uses="LOV_CountryId" id="CountryId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="EmployeeValidateView1Iterator" id="CountryName">
+      <AttrNames>
+        <Item Value="CountryName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeValidateView1Iterator" id="RegionId1">
+      <AttrNames>
+        <Item Value="RegionId1"/>
       </AttrNames>
     </attributeValues>
     <action IterBinding="EmployeeValidateView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
