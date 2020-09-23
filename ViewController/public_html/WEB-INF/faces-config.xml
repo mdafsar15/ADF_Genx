@@ -3,8 +3,4 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
   </application>
-  <validator>
-    <validator-id>SSNValidator</validator-id>
-    <validator-class>view.backing.SSNValidator</validator-class>
-  </validator>
 </faces-config>

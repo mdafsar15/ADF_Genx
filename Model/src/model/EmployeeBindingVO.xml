@@ -76,7 +76,8 @@
     AssociationEnd="model.EmpJobFkAssoc2.JobsEO"
     SourceUsage="model.EmployeeBindingVO.EmployeeBindingEO"
     Reference="true"
-    JoinType="INNER JOIN">
+    JoinType="INNER JOIN"
+    DeleteParticipant="false">
     <DesignTime>
       <AttrArray Name="_dstAttributes">
         <Item Value="model.JobsEO.JobId"/>
@@ -84,15 +85,6 @@
       <AttrArray Name="_srcAttributes">
         <Item Value="model.EmployeeBindingEO.JobId"/>
       </AttrArray>
-    </DesignTime>
-  </EntityUsage>
-  <EntityUsage
-    Name="RegionsEO"
-    Entity="model.RegionsEO"
-    Reference="false"
-    DeleteParticipant="false">
-    <DesignTime>
-      <Attr Name="_customjoin" Value="true"/>
     </DesignTime>
   </EntityUsage>
   <ViewAttribute
