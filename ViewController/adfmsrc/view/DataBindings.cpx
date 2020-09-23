@@ -25,6 +25,7 @@
     <page path="/turnOffValidation.jsf" usageId="view_turnOffValidationPageDef"/>
     <page path="/masterDetailsTable.jsf" usageId="view_masterDetailsTablePageDef"/>
     <page path="/editableRunTime.jsf" usageId="view_editableRunTimePageDef"/>
+    <page path="/treeTable.jsf" usageId="view_treeTablePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -51,6 +52,7 @@
     <page id="view_turnOffValidationPageDef" path="view.pageDefs.turnOffValidationPageDef"/>
     <page id="view_masterDetailsTablePageDef" path="view.pageDefs.masterDetailsTablePageDef"/>
     <page id="view_editableRunTimePageDef" path="view.pageDefs.editableRunTimePageDef"/>
+    <page id="view_treeTablePageDef" path="view.pageDefs.treeTablePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

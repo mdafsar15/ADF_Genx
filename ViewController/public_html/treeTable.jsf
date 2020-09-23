@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="treeTable.jsf" id="d1" binding="#{backingBeanScope.backing_treeTable.d1}">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_treeTable.m1}"/>
+        <af:form id="f1" binding="#{backingBeanScope.backing_treeTable.f1}">
+            <af:treeTable value="#{bindings.RegionsView1.treeModel}" var="node"
+                          selectionListener="#{bindings.RegionsView1.treeModel.makeCurrent}" rowSelection="single"
+                          id="tt1" binding="#{backingBeanScope.backing_treeTable.tt1}">
+                <f:facet name="nodeStamp">
+                    <af:column id="c1">
+                        <af:outputText value="#{node}" id="ot1"/>
+                    </af:column>
+                </f:facet>
+                <f:facet name="pathStamp">
+                    <af:outputText value="#{node}" id="ot2" binding="#{backingBeanScope.backing_treeTable.ot2}"/>
+                </f:facet>
+                <af:column id="c2"/>
+            </af:treeTable>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_treeTable-->
+</f:view>

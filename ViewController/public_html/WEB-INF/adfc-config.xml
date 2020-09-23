@@ -118,4 +118,10 @@
     <managed-bean-class>view.dynamic.BackingBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__20">
+    <managed-bean-name>backing_treeTable</managed-bean-name>
+    <managed-bean-class>view.backing.TreeTable</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1treeTable.jsf-->
+  </managed-bean>
 </adfc-config>
