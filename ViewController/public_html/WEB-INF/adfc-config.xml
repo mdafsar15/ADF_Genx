@@ -95,4 +95,10 @@
     <managed-bean-class>view.validate.Validate</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name>backing_home</managed-bean-name>
+    <managed-bean-class>view.backing.HomeBackingBean</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1backingBean.jsf-->
+  </managed-bean>
 </adfc-config>
