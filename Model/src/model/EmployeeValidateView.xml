@@ -94,6 +94,46 @@
     EntityAttrName="Salary"
     EntityUsage="EmployeeValidateEO"
     AliasName="SALARY"/>
+  <ViewCriteria
+    Name="EmployeeValidateViewCriteria"
+    ViewObjectName="model.EmployeeValidateView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteria
+      Name="EmployeeValidateViewSubCriteria1"
+      ViewObjectName="model.EmployeeValidateView"
+      Conjunction="AND">
+      <ViewCriteriaRow
+        Name="EmployeeValidateViewSubCriteria1_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="Salary"
+          ViewAttribute="Salary"
+          Operator="&lt;"
+          Conjunction="AND"
+          Value="10000"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </ViewCriteria>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>
