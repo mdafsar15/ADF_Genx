@@ -23,6 +23,7 @@
     <page path="/page9.jspx" usageId="view_page9PageDef"/>
     <page path="/EmailValid.jsf" usageId="view_EmailValidPageDef"/>
     <page path="/turnOffValidation.jsf" usageId="view_turnOffValidationPageDef"/>
+    <page path="/masterDetailsTable.jsf" usageId="view_masterDetailsTablePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -47,6 +48,7 @@
     <page id="view_page9PageDef" path="view.pageDefs.page9PageDef"/>
     <page id="view_EmailValidPageDef" path="view.pageDefs.EmailValidPageDef"/>
     <page id="view_turnOffValidationPageDef" path="view.pageDefs.turnOffValidationPageDef"/>
+    <page id="view_masterDetailsTablePageDef" path="view.pageDefs.masterDetailsTablePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
