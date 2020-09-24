@@ -16,7 +16,7 @@
                     </af:group>
                 </f:facet>
             </dvt:barChart>
-            <af:inputColor label="Color" id="ic1"/>
+            <af:inputColor autoSubmit="true" binding="#{backingBeanScope.backing_index.ic1}" label="Color" id="ic1"/>
         </af:form>
     </af:document>
 </f:view>
