@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="barChart.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <dvt:barChart id="barChart1" var="row" value="#{bindings.JobsView1.collectionModel}">
+                <dvt:chartLegend rendered="false" id="cl1"/>
+                <f:facet name="dataStamp">
+                    <af:group id="g1">
+                        <dvt:chartDataItem id="di1" series="#{bindings.JobsView1.hints.MinSalary.label}"
+                                           value="#{row.MinSalary}" group="#{row.JobTitle}"/>
+                        <dvt:chartDataItem id="di2" series="#{bindings.JobsView1.hints.MaxSalary.label}"
+                                           value="#{row.MaxSalary}" group="#{row.JobTitle}"/>
+                    </af:group>
+                </f:facet>
+            </dvt:barChart>
+        </af:form>
+    </af:document>
+</f:view>
