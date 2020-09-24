@@ -50,6 +50,9 @@
   <ViewUsage
     Name="EmployeeValidateView1"
     ViewObjectName="model.EmployeeValidateView"/>
+  <ViewUsage
+    Name="EmployeeDVTPieVO1"
+    ViewObjectName="model.EmployeeDVTPieVO"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"

@@ -4,6 +4,16 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <iterator Binds="EmployeesView1" RangeSize="-1" DataControl="AppModuleDataControl" id="EmployeesView1Iterator"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="EmployeesView1Iterator" id="EmployeesView1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.EmployeesView" Name="EmployeesView1">
+        <AttrNames>
+          <Item Value="Salary"/>
+          <Item Value="JobId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

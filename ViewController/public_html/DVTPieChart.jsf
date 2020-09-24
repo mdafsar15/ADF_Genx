@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
-    <af:document title="pieChart.jsf" id="d1">
+    <af:document title="DVTPieChart.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
-            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.EmployeesView1.collectionModel}">
+            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.EmployeeDVTPieVO1.collectionModel}">
                 <dvt:chartLegend id="cl1"/>
-                <dvt:pieDataItem id="di1" label="#{row.JobId}" value="#{row.Salary}"/>
+                <dvt:pieDataItem id="di1" label="#{row.Job}" value="#{row.Salary}"/>
             </dvt:pieChart>
         </af:form>
     </af:document>
