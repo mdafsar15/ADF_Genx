@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="pivotTableExcelPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeeValidateView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="EmployeeValidateView1Iterator"/>
+  </executables>
+  <bindings>
+    <pivotTable IterBinding="EmployeeValidateView1Iterator" id="EmployeeValidateView1"
+                xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap convert="false">
+        <columns>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item value="Salary"/>
+            <item value="PhoneNumber"/>
+            <item value="FirstName"/>
+            <item value="LastName"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="EmployeeId"/>
+          <item value="JobId"/>
+        </rows>
+      </pivotTableDataMap>
+    </pivotTable>
+  </bindings>
+</pageDefinition>
