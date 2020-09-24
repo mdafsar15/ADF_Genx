@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
              SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/untitled1.jsf" usageId="view_untitled1PageDef"/>
     <page path="/page1.jsf" usageId="view_page1PageDef"/>
@@ -26,6 +30,7 @@
     <page path="/masterDetailsTable.jsf" usageId="view_masterDetailsTablePageDef"/>
     <page path="/editableRunTime.jsf" usageId="view_editableRunTimePageDef"/>
     <page path="/treeTable.jsf" usageId="view_treeTablePageDef"/>
+    <page path="/barChart.jsf" usageId="view_barChartPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -53,6 +58,7 @@
     <page id="view_masterDetailsTablePageDef" path="view.pageDefs.masterDetailsTablePageDef"/>
     <page id="view_editableRunTimePageDef" path="view.pageDefs.editableRunTimePageDef"/>
     <page id="view_treeTablePageDef" path="view.pageDefs.treeTablePageDef"/>
+    <page id="view_barChartPageDef" path="view.pageDefs.barChartPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
