@@ -56,6 +56,9 @@
   <ViewUsage
     Name="SalesVO1"
     ViewObjectName="model.SalesVO"/>
+  <ViewUsage
+    Name="DVTPieChartVO1"
+    ViewObjectName="model.DVTPieChartVO"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"

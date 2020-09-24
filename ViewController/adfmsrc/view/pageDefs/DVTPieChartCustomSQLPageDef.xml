@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="DVTPieChartCustomSQLPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DVTPieChartVO1" RangeSize="-1" DataControl="AppModuleDataControl" id="DVTPieChartVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DVTPieChartVO1Iterator" id="DVTPieChartVO1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.DVTPieChartVO" Name="DVTPieChartVO1">
+        <AttrNames>
+          <Item Value="Salary"/>
+          <Item Value="Job"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

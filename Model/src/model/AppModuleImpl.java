@@ -248,5 +248,13 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public ViewObjectImpl getSalesVO1() {
         return (ViewObjectImpl) findViewObject("SalesVO1");
     }
+
+    /**
+     * Container's getter for DVTPieChartVO1.
+     * @return DVTPieChartVO1
+     */
+    public DVTPieChartVOImpl getDVTPieChartVO1() {
+        return (DVTPieChartVOImpl) findViewObject("DVTPieChartVO1");
+    }
 }
 
