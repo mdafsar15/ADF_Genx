@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="pivotTable.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <dvt:pivotFilterBar id="pfb1" value="#{bindings.SalesVO1.pivotFilterBarModel}" modelName="pt1Model"/>
+            <dvt:pivotTable id="pt1" value="#{bindings.SalesVO1.pivotTableModel}" modelName="pt1Model" var="cellData"
+                            varStatus="cellStatus" splitMode="enabled">
+                <dvt:headerCell>
+                    <af:switcher facetName="#{cellData.layerName}" defaultFacet="Default" id="s1">
+                        <f:facet name="DataLayer">
+                            <af:outputText value="#{cellData.label}" id="ot1"/>
+                        </f:facet>
+                        <f:facet name="Sex">
+                            <af:outputText value="#{cellData.dataValue}" id="ot2"/>
+                        </f:facet>
+                        <f:facet name="Product">
+                            <af:outputText value="#{cellData.dataValue}" id="ot3"/>
+                        </f:facet>
+                        <f:facet name="Location">
+                            <af:outputText value="#{cellData.dataValue}" id="ot4"/>
+                        </f:facet>
+                        <f:facet name="Default">
+                            <af:outputText value="#{cellData.dataValue}" id="ot5"/>
+                        </f:facet>
+                    </af:switcher>
+                </dvt:headerCell>
+                <dvt:dataCell id="dc1">
+                    <af:switcher facetName="#{cellStatus.members.DataLayer.value}" defaultFacet="Default" id="s2">
+                        <f:facet name="Price">
+                            <af:outputText value="#{cellData.dataValue}" id="ot6">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.SalesVO1.hints.Price.format}"/>
+                            </af:outputText>
+                        </f:facet>
+                        <f:facet name="Default">
+                            <af:outputText value="#{cellData.dataValue}" id="ot7"/>
+                        </f:facet>
+                    </af:switcher>
+                </dvt:dataCell>
+            </dvt:pivotTable>
+        </af:form>
+    </af:document>
+</f:view>

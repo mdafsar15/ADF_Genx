@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="pivotTablePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SalesVO1" RangeSize="-1" DataControl="AppModuleDataControl" id="SalesVO1Iterator"/>
+  </executables>
+  <bindings>
+    <pivotTable IterBinding="SalesVO1Iterator" id="SalesVO1" xmlns="http://xmlns.oracle.com/adfm/dvt"
+                ChangeEventPolicy="ppr">
+      <pivotTableDataMap convert="false">
+        <columns>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item value="Price"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="Sex"/>
+          <item value="Product"/>
+        </rows>
+        <pages>
+          <item value="Location"/>
+        </pages>
+      </pivotTableDataMap>
+    </pivotTable>
+  </bindings>
+</pageDefinition>

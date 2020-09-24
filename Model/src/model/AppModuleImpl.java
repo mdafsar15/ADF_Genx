@@ -240,5 +240,13 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public EmployeeDVTPieVOImpl getEmployeeDVTPieVO1() {
         return (EmployeeDVTPieVOImpl) findViewObject("EmployeeDVTPieVO1");
     }
+
+    /**
+     * Container's getter for SalesVO1.
+     * @return SalesVO1
+     */
+    public ViewObjectImpl getSalesVO1() {
+        return (ViewObjectImpl) findViewObject("SalesVO1");
+    }
 }
 

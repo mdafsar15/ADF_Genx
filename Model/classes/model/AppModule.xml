@@ -53,6 +53,9 @@
   <ViewUsage
     Name="EmployeeDVTPieVO1"
     ViewObjectName="model.EmployeeDVTPieVO"/>
+  <ViewUsage
+    Name="SalesVO1"
+    ViewObjectName="model.SalesVO"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"

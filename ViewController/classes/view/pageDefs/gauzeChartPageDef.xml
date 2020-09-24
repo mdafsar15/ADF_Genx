@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="gauzeChartPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeeValidateView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="EmployeeValidateView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeeValidateView1Iterator" id="EmployeeValidateView1">
+      <nodeDefinition DefName="model.EmployeeValidateView" Name="EmployeeValidateView10">
+        <AttrNames>
+          <Item Value="CommissionPct"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="Email"/>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="LastName"/>
+          <Item Value="ManagerId"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="Salary"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

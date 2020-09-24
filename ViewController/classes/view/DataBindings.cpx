@@ -33,6 +33,8 @@
     <page path="/barChart.jsf" usageId="view_barChartPageDef"/>
     <page path="/pieChart.jsf" usageId="view_pieChartPageDef"/>
     <page path="/DVTPieChart.jsf" usageId="view_DVTPieChartPageDef"/>
+    <page path="/gauzeChart.jsf" usageId="view_gauzeChartPageDef"/>
+    <page path="/pivotTable.jsf" usageId="view_pivotTablePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -63,6 +65,8 @@
     <page id="view_barChartPageDef" path="view.pageDefs.barChartPageDef"/>
     <page id="view_pieChartPageDef" path="view.pageDefs.pieChartPageDef"/>
     <page id="view_DVTPieChartPageDef" path="view.pageDefs.DVTPieChartPageDef"/>
+    <page id="view_gauzeChartPageDef" path="view.pageDefs.gauzeChartPageDef"/>
+    <page id="view_pivotTablePageDef" path="view.pageDefs.pivotTablePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
