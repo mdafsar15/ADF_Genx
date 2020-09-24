@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="BarChartSeletedValue.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+        
+        <!--This Bar Chart rendered from Employee View-->
+        
+           <dvt:barChart dataSelection="single" selectionListener="#{BarChart.onClick}"
+
+orientation="vertical" id="barChart1" var="row"
+
+value="#{bindings.EmployeeEOView12.collectionModel}"
+
+binding="#{backingBeanScope.backing_index.barChart1}">
+
+<dvt:chartLegend rendered="false" id="cl1" binding="#{backingBeanScope.backing_index.cl1}"/>
+
+<f:facet name="dataStamp">
+
+<dvt:chartDataItem id="di1" series="#{bindings.EmployeeEOView12.hints.Salary.label}"
+
+value="#{row.Salary}" group="#{row.JobId}"
+
+binding="#{backingBeanScope.backing_index.di1}"/>
+
+</f:facet>
+
+</dvt:barChart>
+<!--This Gauze Chart point to a value that is selected in the Bar Chart-->
+
+<dvt:dialGauge minimum="0" maximum="30000" background="domeLight" id="dialGauge1"
+
+binding="#{backingBeanScope.backing_index.dialGauge1}">
+
+<dvt:gaugeMetricLabel rendered="true" id="gml1" binding="#{backingBeanScope.backing_index.gml1}"/>
+
+</dvt:dialGauge>
+        </af:form>
+    </af:document>
+</f:view>

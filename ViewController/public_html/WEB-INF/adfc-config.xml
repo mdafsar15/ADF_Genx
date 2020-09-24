@@ -142,4 +142,9 @@
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1adfIcon.jsf-->
   </managed-bean>
+  <managed-bean id="__24">
+    <managed-bean-name>BarChart</managed-bean-name>
+    <managed-bean-class>view.bar.BarChart</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
