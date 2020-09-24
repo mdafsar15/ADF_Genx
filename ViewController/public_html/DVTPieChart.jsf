@@ -5,7 +5,8 @@
     <af:document title="DVTPieChart.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
-            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.EmployeeDVTPieVO1.collectionModel}">
+            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.EmployeeDVTPieVO1.collectionModel}"
+                          innerRadius="0.5">
                 <dvt:chartLegend id="cl1"/>
                 <dvt:pieDataItem id="di1" label="#{row.Job}" value="#{row.Salary}"/>
             </dvt:pieChart>
