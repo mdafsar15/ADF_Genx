@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="popup.jsf" id="d1" binding="#{backingBeanScope.backing_popup.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_popup.f1}">
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_popup.p1}">
+                <af:dialog id="d2" binding="#{backingBeanScope.backing_popup.d2}">
+                    <af:outputText value="outputText1" id="ot1" binding="#{backingBeanScope.backing_popup.ot1}"/>
+                    <f:facet name="buttonBar"/>
+                </af:dialog>
+            </af:popup>
+                      
+                      
+            <af:button text="button 1" id="b1" binding="#{backingBeanScope.backing_popup.b1}"/>
+            <af:showPopupBehavior popupId="p1"/>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_popup-->
+</f:view>

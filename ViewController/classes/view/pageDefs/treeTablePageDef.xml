@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="treeTablePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RegionsView1" RangeSize="25" DataControl="AppModuleDataControl" id="RegionsView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RegionsView1Iterator" id="RegionsView1">
+      <nodeDefinition DefName="model.RegionsView" Name="RegionsView10">
+        <AttrNames>
+          <Item Value="RegionId"/>
+          <Item Value="RegionName"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="CountriesView"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="model.CountriesView" Name="RegionsView11">
+        <AttrNames>
+          <Item Value="CountryId"/>
+          <Item Value="CountryName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

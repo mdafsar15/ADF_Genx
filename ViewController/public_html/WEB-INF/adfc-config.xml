@@ -124,4 +124,10 @@
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1treeTable.jsf-->
   </managed-bean>
+  <managed-bean id="__21">
+    <managed-bean-name>backing_popup</managed-bean-name>
+    <managed-bean-class>view.backing.Popup</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1popup.jsf-->
+  </managed-bean>
 </adfc-config>
