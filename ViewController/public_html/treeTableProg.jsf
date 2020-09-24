@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="treeTableProg.jsf" id="d1" binding="#{backingBeanScope.backing_treeTableProg.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_treeTableProg.f1}"></af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_treeTableProg-->
+</f:view>

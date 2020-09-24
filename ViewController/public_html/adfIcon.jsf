@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="adfIcon.jsf" id="d1" binding="#{backingBeanScope.backing_adfIcon.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_adfIcon.f1}"></af:form>
+        <af:panelGroupLayout id="pgl1" layout="vertical" >
+                <af:outputText value="ADF ICONS DEMO" id="ot1" inlineStyle="color:Blue; font-size:large;"/>
+                  
+                    <af:panelGroupLayout id="pgl2" layout="horizontal">
+                        <af:outputText value="Required" id="ot2"/>
+                        <af:icon name="required" id="i1"/>
+                    </af:panelGroupLayout>
+                
+                    <af:panelGroupLayout id="pgl3" layout="horizontal">
+                        <af:outputText value="Changed" id="ot3"/>
+                        <af:icon name="changed"  id="i2"/>
+                    </af:panelGroupLayout>
+                
+                    <af:panelGroupLayout id="pgl4" layout="horizontal">
+                        <af:outputText value="Error" id="ot4"/>
+                        <af:icon name="error" id="i3"/>
+                    </af:panelGroupLayout>
+                    
+                    <af:panelGroupLayout id="pgl5" layout="horizontal">
+                        <af:outputText value="Info" id="ot5"/>  
+                        <af:icon name="info" id="i4"/>
+                    </af:panelGroupLayout>
+                
+                    <af:panelGroupLayout id="pgl6" layout="horizontal">
+                        <af:outputText value="Logo" id="ot6"/>  
+                         <af:icon name="logo" id="i5" />
+                    </af:panelGroupLayout>
+                
+                    <af:panelGroupLayout id="pgl7" layout="horizontal">
+                        <af:outputText value="Warning" id="ot7"/>  
+                        <af:icon name="warning" id="i6"/>
+                    </af:panelGroupLayout>
+                    
+  </af:panelGroupLayout>
+        
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_adfIcon-->
+</f:view>

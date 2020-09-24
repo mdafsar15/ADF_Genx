@@ -130,4 +130,16 @@
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1popup.jsf-->
   </managed-bean>
+  <managed-bean id="__22">
+    <managed-bean-name>backing_treeTableProg</managed-bean-name>
+    <managed-bean-class>view.backing.TreeTableProg</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1treeTableProg.jsf-->
+  </managed-bean>
+  <managed-bean id="__23">
+    <managed-bean-name>backing_adfIcon</managed-bean-name>
+    <managed-bean-class>view.backing.AdfIcon</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1adfIcon.jsf-->
+  </managed-bean>
 </adfc-config>
