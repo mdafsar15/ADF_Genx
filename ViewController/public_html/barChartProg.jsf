@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="barChartProg.jsf" id="d1">
+        <dvt:barChart orientation="vertical" id="barChart1" var="row" value="#{backingBeanScope.backing_index.barChartData}" >
+
+<dvt:chartLegend rendered="false" id="cl1" />
+
+<f:facet name="dataStamp">
+
+<dvt:chartDataItem id="di1" series="#{row.location}" value="#{row.salary}" group="#{row.job}" />
+
+</f:facet>
+
+</dvt:barChart>
+        <af:form id="f1" binding="#{BarChartProg.getBarChartData}"></af:form>
+    </af:document>
+</f:view>

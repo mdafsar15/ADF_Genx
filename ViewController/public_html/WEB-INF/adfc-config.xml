@@ -147,4 +147,14 @@
     <managed-bean-class>view.bar.BarChart</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__26">
+    <managed-bean-name>loginBean</managed-bean-name>
+    <managed-bean-class>view.genx.view.LoginBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__25">
+    <managed-bean-name>BarChartProg</managed-bean-name>
+    <managed-bean-class>view.genx.bar.Bar</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
