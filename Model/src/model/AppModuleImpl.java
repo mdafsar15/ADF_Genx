@@ -161,21 +161,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewObjectImpl) findViewObject("EmployeeBindingVO1");
     }
 
-    /**
-     * Container's getter for CountryNewEOView1.
-     * @return CountryNewEOView1
-     */
-    public ViewObjectImpl getCountryNewEOView1() {
-        return (ViewObjectImpl) findViewObject("CountryNewEOView1");
-    }
-
-    /**
-     * Container's getter for LocationsView1.
-     * @return LocationsView1
-     */
-    public ViewObjectImpl getLocationsView1() {
-        return (ViewObjectImpl) findViewObject("LocationsView1");
-    }
 
     /**
      * Container's getter for RegionsView1.
@@ -193,13 +178,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewObjectImpl) findViewObject("CountryNewEOView2");
     }
 
-    /**
-     * Container's getter for LocCIdFkAssoc1Link.
-     * @return LocCIdFkAssoc1Link
-     */
-    public ViewLinkImpl getLocCIdFkAssoc1Link() {
-        return (ViewLinkImpl) findViewLink("LocCIdFkAssoc1Link");
-    }
 
     /**
      * Container's getter for CountrRegFkAssoc1Link.
@@ -209,13 +187,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewLinkImpl) findViewLink("CountrRegFkAssoc1Link");
     }
 
-    /**
-     * Container's getter for CountryNewView1.
-     * @return CountryNewView1
-     */
-    public CountryNewViewImpl getCountryNewView1() {
-        return (CountryNewViewImpl) findViewObject("CountryNewView1");
-    }
 
     /**
      * Container's getter for JobsView1.
@@ -241,13 +212,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (EmployeeDVTPieVOImpl) findViewObject("EmployeeDVTPieVO1");
     }
 
-    /**
-     * Container's getter for SalesVO1.
-     * @return SalesVO1
-     */
-    public ViewObjectImpl getSalesVO1() {
-        return (ViewObjectImpl) findViewObject("SalesVO1");
-    }
 
     /**
      * Container's getter for DVTPieChartVO1.
@@ -255,6 +219,14 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public DVTPieChartVOImpl getDVTPieChartVO1() {
         return (DVTPieChartVOImpl) findViewObject("DVTPieChartVO1");
+    }
+
+    /**
+     * Container's getter for CountryNewEOView1.
+     * @return CountryNewEOView1
+     */
+    public ViewObjectImpl getCountryNewEOView1() {
+        return (ViewObjectImpl) findViewObject("CountryNewEOView1");
     }
 }
 

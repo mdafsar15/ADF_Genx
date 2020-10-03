@@ -30,20 +30,11 @@
     Name="EmployeeBindingVO1"
     ViewObjectName="model.EmployeeBindingVO"/>
   <ViewUsage
-    Name="CountryNewEOView1"
-    ViewObjectName="model.CountryNewEOView"/>
-  <ViewUsage
-    Name="LocationsView1"
-    ViewObjectName="model.LocationsView"/>
-  <ViewUsage
     Name="RegionsView1"
     ViewObjectName="model.RegionsView"/>
   <ViewUsage
     Name="CountryNewEOView2"
     ViewObjectName="model.CountryNewEOView"/>
-  <ViewUsage
-    Name="CountryNewView1"
-    ViewObjectName="model.CountryNewView"/>
   <ViewUsage
     Name="JobsView1"
     ViewObjectName="model.JobsView"/>
@@ -54,22 +45,16 @@
     Name="EmployeeDVTPieVO1"
     ViewObjectName="model.EmployeeDVTPieVO"/>
   <ViewUsage
-    Name="SalesVO1"
-    ViewObjectName="model.SalesVO"/>
-  <ViewUsage
     Name="DVTPieChartVO1"
     ViewObjectName="model.DVTPieChartVO"/>
+  <ViewUsage
+    Name="CountryNewEOView1"
+    ViewObjectName="model.CountryNewEOView"/>
   <ViewLinkUsage
     Name="DeptEmpVL1"
     ViewLinkObjectName="model.DeptEmpVL"
     SrcViewUsageName="model.AppModule.DepartmentView1"
     DstViewUsageName="model.AppModule.EmployeesView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="LocCIdFkAssoc1Link"
-    ViewLinkObjectName="model.LocCIdFkAssoc1Link"
-    SrcViewUsageName="model.AppModule.CountryNewEOView1"
-    DstViewUsageName="model.AppModule.LocationsView1"
     Reversed="false"/>
   <ViewLinkUsage
     Name="CountrRegFkAssoc1Link"
