@@ -9,10 +9,10 @@ import javax.security.auth.login.LoginException;
 import javax.servlet.http.HttpServletRequest;
 
 
-import weblogic.security.URLCallbackHandler;
-import weblogic.security.services.Authentication;
-
-import weblogic.servlet.security.ServletAuthentication;
+//import weblogic.security.URLCallbackHandler;
+//import weblogic.security.services.Authentication;
+//
+//import weblogic.servlet.security.ServletAuthentication;
 
 public class LoginBean {
     
@@ -36,19 +36,21 @@ public class LoginBean {
     }
     
     public String doLogin(){
-        
-        String un = _username;
-        byte[] pw = _password.getBytes();
-        
-        FacesContext ctx = FacesContext.getCurrentInstance();
-       HttpServletRequest request = (HttpServletRequest)ctx.getExternalContext().getRequest();
-        Subject mySubject;
-        try {
-             mySubject = Authentication.login(new URLCallbackHandler(un, pw));
-//            ServletAuthentication.runAs(mySubject, request);
-        } catch (LoginException e) {
-        }
-
+//        
+//        String un = _username;
+//        byte[] pw = _password.getBytes();
+//        
+//        FacesContext ctx = FacesContext.getCurrentInstance();
+//       HttpServletRequest request = (HttpServletRequest)ctx.getExternalContext().getRequest();
+//        Subject mySubject;
+//        try {
+//             mySubject = Authentication.login(new URLCallbackHandler(un, pw));
+////            ServletAuthentication.runAs(mySubject, request);
+//        } catch (LoginException e) {
+//        }
+//
+//        return null;
+//    }
         return null;
-    }
+}
 }

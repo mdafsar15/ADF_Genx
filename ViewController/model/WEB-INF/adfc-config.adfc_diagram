@@ -210,4 +210,34 @@
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View21">
+      <property
+         name="activityId">HomePage</property>
+      <property
+         name="x">-273.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>HomePage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">1032.2471</property>
+      <property
+         name="page">/HomePage.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View22">
+      <property
+         name="activityId">DetailPage</property>
+      <property
+         name="x">6.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>DetailPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">1028.2988</property>
+      <property
+         name="page">/DetailPage.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
 </SDM>

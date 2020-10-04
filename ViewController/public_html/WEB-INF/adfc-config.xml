@@ -36,6 +36,12 @@
   <view id="view4">
     <page>/view4.jspx</page>
   </view>
+  <view id="HomePage">
+    <page>/HomePage.jspx</page>
+  </view>
+  <view id="DetailPage">
+    <page>/DetailPage.jspx</page>
+  </view>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
