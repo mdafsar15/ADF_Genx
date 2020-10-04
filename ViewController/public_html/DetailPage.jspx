@@ -5,7 +5,15 @@
     <f:view>
         <af:document title="DetailPage.jspx" id="d1">
             <af:form id="f1">
-                <af:outputText value="This is Detail Page" id="ot1" inlineStyle="font-size:xx-large;"/>
+                <p>
+                    <af:outputText value="This is Detail Page" id="ot2" inlineStyle="font-size:xx-large;"/>
+                </p>
+                <p>
+                    <af:button text="Goto Home Page" id="b1" action="backToHome"/>
+                </p>
+                <p>
+                    &#160;
+                </p>
             </af:form>
         </af:document>
     </f:view>

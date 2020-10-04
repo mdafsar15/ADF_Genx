@@ -240,4 +240,24 @@
       <property
          name="exceptionHandler">false</property>
    </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase24"
+      from="View21"
+      to="View22">
+      <property
+         name="fromOutcome">gotoDetail</property>
+      <property
+         name="sdm:polyPoints">R46,-232.0,1028.3965,-35.070152,1024.4482,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="View22"
+      to="View21">
+      <property
+         name="fromOutcome">backToHome</property>
+      <property
+         name="sdm:polyPoints">L54,-35.0,1031.4482,-231.92986,1035.3965,R54</property>
+   </ControlFlowCase>
 </SDM>

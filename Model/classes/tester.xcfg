@@ -8,4 +8,12 @@
          <Custom ns0:LastUsedConfiguration="AppModuleLocal" ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
       </AppModuleConfig>
    </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="APs.AppModule">
+      <AppModuleConfig name="174F3BAA754" JDBCName="Genx11g" DeployPlatform="LOCAL" jbo.project="model.Model" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModuleLocal" ApplicationName="APs.AppModule" DBconnection="java:comp/env/jdbc/Genx11gDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Genx11gDS" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="APs.AppModule"/>
+         <Tester FullProxyInterfaceName="APs.common.AppModule"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
 </BC4JConfig>

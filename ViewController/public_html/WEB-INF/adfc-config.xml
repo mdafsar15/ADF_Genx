@@ -81,6 +81,20 @@
       <to-activity-id>detail</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
+  <control-flow-rule id="__29">
+    <from-activity-id>HomePage</from-activity-id>
+    <control-flow-case id="__30">
+      <from-outcome>gotoDetail</from-outcome>
+      <to-activity-id>DetailPage</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__31">
+    <from-activity-id>DetailPage</from-activity-id>
+    <control-flow-case id="__32">
+      <from-outcome>backToHome</from-outcome>
+      <to-activity-id>HomePage</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
   <managed-bean id="__1">
     <managed-bean-name>MyBean</managed-bean-name>
     <managed-bean-class>view.backing.MyClass</managed-bean-class>

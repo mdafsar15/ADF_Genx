@@ -13,7 +13,36 @@
     <Attr Name="_jprName" Value="../../Model.jpr"/>
     <Attr Name="_NamedConnection" Value="Genx11g"/>
     <Attr Name="_appModuleNames0" Value="model.AppModule"/>
+    <Attr Name="_appModuleNames1" Value="EOs.AppModule"/>
+    <Attr Name="_appModuleNames2" Value="APs.AppModule"/>
   </DesignTime>
+  <Containee
+    Name="APs"
+    PackageName="APs"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="EOs"
+    PackageName="EOs"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="EOsNew"
+    PackageName="EOsNew"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
   <Containee
     Name="model"
     PackageName="model"
@@ -24,6 +53,14 @@
       <Attr Name="_VO" Value="true"/>
       <Attr Name="_AM" Value="true"/>
       <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="VOs"
+    PackageName="VOs"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
     </DesignTime>
   </Containee>
   <AppModuleUsage
