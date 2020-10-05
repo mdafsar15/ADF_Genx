@@ -10,4 +10,7 @@
   <ViewUsage
     Name="EmployeesVO1"
     ViewObjectName="VOs.EmployeesVO"/>
+  <ViewUsage
+    Name="DepartmentsVO1"
+    ViewObjectName="EOsNew.DepartmentsVO"/>
 </AppModule>
