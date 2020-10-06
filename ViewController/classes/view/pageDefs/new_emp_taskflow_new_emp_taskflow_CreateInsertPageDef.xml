@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14"
+                id="new_emp_taskflow_new_emp_taskflow_CreateInsertPageDef" Package="view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="EmployeesVO1" RangeSize="25" DataControl="AppModuleDataControl3" id="EmployeesVO1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="EmployeesVO1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

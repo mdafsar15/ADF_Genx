@@ -38,6 +38,16 @@
     <page path="/DVTPieChartCustomSQL.jsf" usageId="view_DVTPieChartCustomSQLPageDef"/>
     <page path="/pivotTableExcel.jsf" usageId="view_pivotTableExcelPageDef"/>
     <page path="/BarChartSeletedValue.jsf" usageId="view_BarChartSeletedValuePageDef"/>
+    <page path="/untitled1.jspx" usageId="view_untitled1PageDef1"/>
+    <page path="/Check.jsf" usageId="view_CheckPageDef"/>
+    <page path="/check.jsf" usageId="view_CheckPageDef"/>
+    <page path="/WEB-INF/new-emp-taskflow.xml#new-emp-taskflow@CreateInsert"
+          usageId="view_new_emp_taskflow_new_emp_taskflow_CreateInsertPageDef"/>
+    <page path="/contact.jsf" usageId="view_contactPageDef"/>
+    <page path="/salary.jsf" usageId="view_salaryPageDef"/>
+    <page path="/otherInfo.jsf" usageId="view_otherInfoPageDef"/>
+    <page path="/review.jsf" usageId="view_reviewPageDef"/>
+    <page path="/empTable.jsf" usageId="view_empTablePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled1PageDef" path="view.pageDefs.untitled1PageDef"/>
@@ -73,9 +83,23 @@
     <page id="view_DVTPieChartCustomSQLPageDef" path="view.pageDefs.DVTPieChartCustomSQLPageDef"/>
     <page id="view_pivotTableExcelPageDef" path="view.pageDefs.pivotTableExcelPageDef"/>
     <page id="view_BarChartSeletedValuePageDef" path="view.pageDefs.BarChartSeletedValuePageDef"/>
+    <page id="view_untitled1PageDef1" path="view.pageDefs.untitled1PageDef1"/>
+    <page id="view_CheckPageDef" path="view.pageDefs.CheckPageDef"/>
+    <page id="view_new_emp_taskflow_new_emp_taskflow_CreateInsertPageDef"
+          path="view.pageDefs.new_emp_taskflow_new_emp_taskflow_CreateInsertPageDef"/>
+    <page id="view_contactPageDef" path="view.pageDefs.contactPageDef"/>
+    <page id="view_salaryPageDef" path="view.pageDefs.salaryPageDef"/>
+    <page id="view_otherInfoPageDef" path="view.pageDefs.otherInfoPageDef"/>
+    <page id="view_reviewPageDef" path="view.pageDefs.reviewPageDef"/>
+    <page id="view_empTablePageDef" path="view.pageDefs.empTablePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl3" Package="EOProject"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"

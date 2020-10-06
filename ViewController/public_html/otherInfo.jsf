@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="otherInfo.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1" topHeight="67px">
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:facet name="top">
+                    <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+                </f:facet>
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputDate value="#{bindings.HireDate.inputValue}" label="#{bindings.HireDate.hints.label}"
+                                      required="#{bindings.HireDate.hints.mandatory}"
+                                      columns="#{bindings.HireDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.HireDate.hints.tooltip}" id="id1">
+                            <f:validator binding="#{bindings.HireDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.HireDate.format}"/>
+                        </af:inputDate>
+                        <af:selectOneChoice value="#{bindings.JobId.inputValue}" label="#{bindings.JobId.label}"
+                                            required="#{bindings.JobId.hints.mandatory}"
+                                            shortDesc="#{bindings.JobId.hints.tooltip}" id="soc1">
+                            <f:selectItems value="#{bindings.JobId.items}" id="si1"/>
+                            <f:validator binding="#{bindings.JobId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:selectOneChoice value="#{bindings.ManagerId.inputValue}" label="#{bindings.ManagerId.label}"
+                                            required="#{bindings.ManagerId.hints.mandatory}"
+                                            shortDesc="#{bindings.ManagerId.hints.tooltip}" id="soc2">
+                            <f:selectItems value="#{bindings.ManagerId.items}" id="si2"/>
+                            <f:validator binding="#{bindings.ManagerId.validator}"/>
+                        </af:selectOneChoice>
+                        <af:selectOneChoice value="#{bindings.DepartmentId.inputValue}"
+                                            label="#{bindings.DepartmentId.label}"
+                                            required="#{bindings.DepartmentId.hints.mandatory}"
+                                            shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="soc3">
+                            <f:selectItems value="#{bindings.DepartmentId.items}" id="si3"/>
+                            <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                        </af:selectOneChoice>
+                    </af:panelFormLayout>
+                    <af:trainButtonBar value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}"
+                                       id="tbb1"/>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

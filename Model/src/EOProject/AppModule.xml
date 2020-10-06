@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="EmployeesVO1"
+    ViewObjectName="EOProject.EmployeesVO"/>
+  <ViewUsage
+    Name="EmployeesROVO1"
+    ViewObjectName="EOProject.EmployeesROVO"/>
+  <ViewUsage
+    Name="DepartmentsROVO1"
+    ViewObjectName="EOProject.DepartmentsROVO"/>
+  <ViewUsage
+    Name="JobsROVO1"
+    ViewObjectName="EOProject.JobsROVO"/>
+  <ViewUsage
+    Name="EmployeesVO2"
+    ViewObjectName="EOProject.EmployeesVO"/>
+  <ViewUsage
+    Name="EmployeesROVO2"
+    ViewObjectName="EOProject.EmployeesROVO"/>
+  <ViewUsage
+    Name="DepartmentsROVO2"
+    ViewObjectName="EOProject.DepartmentsROVO"/>
+  <ViewUsage
+    Name="EmployeesROVO3"
+    ViewObjectName="EOProject.EmployeesROVO"/>
+  <ViewUsage
+    Name="EmployeesROVO4"
+    ViewObjectName="EOProject.EmployeesROVO"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="EOProject.EmpManagerFkLink"
+    SrcViewUsageName="EOProject.AppModule.EmployeesVO1"
+    DstViewUsageName="EOProject.AppModule.EmployeesVO2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1_1"
+    ViewLinkObjectName="EOProject.EmpManagerFkLink1"
+    SrcViewUsageName="EOProject.AppModule.EmployeesROVO1"
+    DstViewUsageName="EOProject.AppModule.EmployeesROVO2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="EOProject.DeptMgrFkLink"
+    SrcViewUsageName="EOProject.AppModule.EmployeesROVO1"
+    DstViewUsageName="EOProject.AppModule.DepartmentsROVO2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="EOProject.EmpDeptFkLink"
+    SrcViewUsageName="EOProject.AppModule.DepartmentsROVO1"
+    DstViewUsageName="EOProject.AppModule.EmployeesROVO3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpJobFkLink1"
+    ViewLinkObjectName="EOProject.EmpJobFkLink"
+    SrcViewUsageName="EOProject.AppModule.JobsROVO1"
+    DstViewUsageName="EOProject.AppModule.EmployeesROVO4"
+    Reversed="false"/>
+</AppModule>

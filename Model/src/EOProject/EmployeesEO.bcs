@@ -1,0 +1,12 @@
+//Groovy Scripts for EOProject.EmployeesEO
+
+package EOProject
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="HireDate")
+def HireDate_ExpressionScript_Expression()
+{
+adf.currentDate
+}
+

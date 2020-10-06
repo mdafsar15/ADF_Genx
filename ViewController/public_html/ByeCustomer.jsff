@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <p>
+    <af:outputText value="This is Bye Bye Page " id="ot1" inlineStyle="font-size:xx-large;"/>
+  </p>
+  <p>
+    <af:outputText value="Bye Bye" id="ot2"/>
+  </p>
+  <p>
+    &#160;
+  </p>
+  <af:button text="Goto Task Flow return " id="b1" action="return "/>
+</jsp:root>

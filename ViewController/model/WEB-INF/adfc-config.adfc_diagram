@@ -260,4 +260,46 @@
       <property
          name="sdm:polyPoints">L54,-35.0,1031.4482,-231.92986,1035.3965,R54</property>
    </ControlFlowCase>
+   <View
+      id="View26">
+      <property
+         name="activityId">empTable</property>
+      <property
+         name="x">-332.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>empTable&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">1169.2988</property>
+      <property
+         name="page">/empTable.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall27">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>new-emp-taskflow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">new-emp-taskflow</property>
+      <property
+         name="x">-84.65137</property>
+      <property
+         name="y">1166.4482</property>
+      <property
+         name="documentReference">/WEB-INF/new-emp-taskflow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">new-emp-taskflow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase28"
+      from="View26"
+      to="TaskFlowCall27">
+      <property
+         name="fromOutcome">newEmp</property>
+      <property
+         name="sdm:polyPoints">R50,-291.0,1168.9482,-125.65137,1166.0977,L50</property>
+   </ControlFlowCase>
 </SDM>

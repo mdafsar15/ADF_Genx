@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <p>
+    <af:outputText value=" Thsi is WelcomeCustomer Page" id="ot1" inlineStyle="font-size:xx-large;"/>
+  </p>
+  <p>
+    <af:outputText value="Hello" id="ot2"/>
+  </p>
+  <af:button text="Goto Bye Bye Page" id="b1" action="go"/>
+</jsp:root>

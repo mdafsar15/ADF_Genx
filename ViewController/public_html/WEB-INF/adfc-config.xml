@@ -42,6 +42,15 @@
   <view id="DetailPage">
     <page>/DetailPage.jspx</page>
   </view>
+  <view id="empTable">
+    <page>/empTable.jsf</page>
+  </view>
+  <task-flow-call id="new-emp-taskflow">
+    <task-flow-reference>
+      <document>/WEB-INF/new-emp-taskflow.xml</document>
+      <id>new-emp-taskflow</id>
+    </task-flow-reference>
+  </task-flow-call>
   <control-flow-rule id="__3">
     <from-activity-id>view1</from-activity-id>
     <control-flow-case id="__4">
@@ -93,6 +102,13 @@
     <control-flow-case id="__32">
       <from-outcome>backToHome</from-outcome>
       <to-activity-id>HomePage</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__27">
+    <from-activity-id>empTable</from-activity-id>
+    <control-flow-case id="__28">
+      <from-outcome>newEmp</from-outcome>
+      <to-activity-id>new-emp-taskflow</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <managed-bean id="__1">

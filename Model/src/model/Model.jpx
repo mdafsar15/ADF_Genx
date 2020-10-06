@@ -15,12 +15,25 @@
     <Attr Name="_appModuleNames0" Value="model.AppModule"/>
     <Attr Name="_appModuleNames1" Value="EOs.AppModule"/>
     <Attr Name="_appModuleNames2" Value="APs.AppModule"/>
+    <Attr Name="_appModuleNames3" Value="EOProject.AppModule"/>
   </DesignTime>
   <Containee
     Name="APs"
     PackageName="APs"
     ObjectType="JboPackage">
     <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="EOProject"
+    PackageName="EOProject"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
       <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
@@ -68,5 +81,10 @@
     Name="AppModule"
     FullName="model.AppModule"
     ConfigurationName="model.AppModuleShared"
+    SharedScope="2"/>
+  <AppModuleUsage
+    Name="AppModule1"
+    FullName="EOProject.AppModule"
+    ConfigurationName="EOProject.AppModuleShared"
     SharedScope="2"/>
 </JboProject>

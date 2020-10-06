@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="new-emp-taskflow">
+    <default-activity>CreateInsert</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>newEmp</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="contact">
+      <page>/contact.jsf</page>
+      <train-stop>
+        <display-name>Contact</display-name>
+      </train-stop>
+    </view>
+    <view id="salary">
+      <page>/salary.jsf</page>
+      <train-stop>
+        <display-name>Payment Info</display-name>
+      </train-stop>
+    </view>
+    <view id="otherInfo">
+      <page>/otherInfo.jsf</page>
+      <train-stop>
+        <display-name>Additional Info</display-name>
+      </train-stop>
+    </view>
+    <view id="review">
+      <page>/review.jsf</page>
+      <train-stop>
+        <display-name>Review</display-name>
+      </train-stop>
+    </view>
+    <task-flow-return id="commit">
+      <outcome>
+        <name>commit</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="rollback">
+      <outcome>
+        <name>rollback</name>
+        <rollback/>
+      </outcome>
+    </task-flow-return>
+    <train/>
+    <control-flow-rule id="__1">
+      <from-activity-id>CreateInsert</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>newEmp</from-outcome>
+        <to-activity-id>contact</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>review</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>ok</from-outcome>
+        <to-activity-id>commit</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>undo</from-outcome>
+        <to-activity-id>rollback</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

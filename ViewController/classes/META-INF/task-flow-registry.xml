@@ -1,4 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
    <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="WEB-INF/customer-shopping-task-flow-definition.xml" id="customer-shopping-task-flow-definition" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/new-emp-taskflow.xml" id="new-emp-taskflow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="true" critical="false" page-type="facelets"/>
 </task-flow-registry>

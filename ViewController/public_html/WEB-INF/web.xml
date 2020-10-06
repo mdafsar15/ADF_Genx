@@ -140,4 +140,10 @@
   <listener>
     <listener-class>oracle.bc4j.mbean.BC4JConfigLifeCycleCallBack</listener-class>
   </listener>
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsff</url-pattern>
+      <is-xml>true</is-xml>
+    </jsp-property-group>
+  </jsp-config>
 </web-app>

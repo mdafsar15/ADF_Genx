@@ -273,6 +273,14 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Com.bea.core.weblogic.security.auth.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Wls-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -300,20 +308,12 @@
             <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
-         <hash>
-            <value n="id" v="Com.bea.core.weblogic.security.auth.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Wls-api.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
       </list>
       <hash n="internalDefinitions">
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url path="../../../Software_Installed/wlserver/modules/com.bea.core.weblogic.security.auth.jar" jar-entry=""/>
+                  <url protocol="jar" path="file:/Software_Installed/wlserver/modules/com.bea.core.weblogic.security.auth.jar!/"/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Com.bea.core.weblogic.security.auth.jar"/>
@@ -322,7 +322,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../../../Software_Installed/wlserver/server/lib/wls-api.jar" jar-entry=""/>
+                  <url protocol="jar" path="file:/Software_Installed/wlserver/server/lib/wls-api.jar!/"/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Wls-api.jar"/>
@@ -413,6 +413,14 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Com.bea.core.weblogic.security.auth.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Wls-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -438,14 +446,6 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Com.bea.core.weblogic.security.auth.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Wls-api.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
