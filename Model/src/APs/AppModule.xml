@@ -6,11 +6,28 @@
   Name="AppModule"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  DefClass="APs.AppModuleDefImpl"
+  ComponentClass="APs.AppModuleImpl"
+  ComponentInterface="APs.common.AppModule">
+  <DesignTime>
+    <Attr Name="_isDefCodegen" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewUsage
     Name="EmployeesVO1"
     ViewObjectName="VOs.EmployeesVO"/>
   <ViewUsage
     Name="DepartmentsVO1"
     ViewObjectName="EOsNew.DepartmentsVO"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="foo"
+      MethodName="foo">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientInterface>
 </AppModule>
