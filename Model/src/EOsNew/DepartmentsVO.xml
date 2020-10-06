@@ -19,6 +19,10 @@
         ResId="EOsNew.DepartmentsVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
+  <Variable
+    Name="deptId"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
   <EntityUsage
     Name="DepartmentsEO"
     Entity="EOsNew.DepartmentsEO"/>
@@ -48,6 +52,42 @@
     EntityAttrName="ManagerId"
     EntityUsage="DepartmentsEO"
     AliasName="MANAGER_ID"/>
+  <ViewCriteria
+    Name="DepartmentsVOCriteria"
+    ViewObjectName="EOsNew.DepartmentsVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="DepartmentsVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="DepartmentsVOCriteria_DepartmentsVOCriteria_row_0_DepartmentId"
+        ViewAttribute="DepartmentId"
+        Operator=">="
+        Conjunction="AND"
+        Value=":deptId"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

@@ -39,5 +39,13 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         ResourceBundleDef r= getResourceBundleDef();
         throw new JboException(r, "INVALID", null);
     }
+
+    /**
+     * Container's getter for DepartmentsVO2.
+     * @return DepartmentsVO2
+     */
+    public ViewObjectImpl getDepartmentsVO2() {
+        return (ViewObjectImpl) findViewObject("DepartmentsVO2");
+    }
 }
 

@@ -20,6 +20,9 @@
   <ViewUsage
     Name="DepartmentsVO1"
     ViewObjectName="EOsNew.DepartmentsVO"/>
+  <ViewUsage
+    Name="DepartmentsVO2"
+    ViewObjectName="EOsNew.DepartmentsVO"/>
   <ClientInterface
     Name="__clientInterface">
     <Method
