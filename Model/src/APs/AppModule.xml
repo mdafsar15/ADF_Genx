@@ -22,7 +22,18 @@
     ViewObjectName="EOsNew.DepartmentsVO"/>
   <ViewUsage
     Name="DepartmentsVO2"
-    ViewObjectName="EOsNew.DepartmentsVO"/>
+    ViewObjectName="EOsNew.DepartmentsVO">
+    <ViewCriteriaUsage
+      Name="DepartmentsVOCriteria"
+      FullName="EOsNew.DepartmentsVO.DepartmentsVOCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="deptId">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[40]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewUsage>
   <ClientInterface
     Name="__clientInterface">
     <Method
